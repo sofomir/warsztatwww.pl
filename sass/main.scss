@@ -1,5 +1,6 @@
 @use './reset';
 @use './colors';
+@use './variables';
 
 h1,
 h2,
@@ -14,10 +15,17 @@ p {
 	font-family: 'Inter', sans-serif;
 }
 
+.wrapper {
+	position: relative;
+	height: 100%;
+	margin: 0 auto;
+	max-width: 1300px;
+}
+
+//hero section
 .hero {
 	position: relative;
 	height: 100vh;
-	max-height: 1000px;
 	background-size: cover;
 	background-position: center;
 
@@ -28,26 +36,39 @@ p {
 		background-color: rgba(0, 0, 0, 0.5);
 	}
 
-	&-text {
+	&-content {
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
 		gap: 20px;
-		padding: 50px;
-		height: 100%;
 
 		p {
 			font-size: 2.5rem;
 		}
+
+		button {
+			padding: 15px 50px;
+			border: none;
+			font-size: 1.8rem;
+			font-family: 'Inter', sans-serif;
+			text-transform: uppercase;
+			background: lightcyan
+		}
 	}
 }
 
+//hero section - main hero
+
 .hero-main {
-	// position: sticky;
 	background-image: url('../img/gray-background-light_1000x667px.jpg');
 	color: colors.$main-black;
+	padding: variables.$border-paddinng-desktop;
 
 	&-bg {
 		background-color: rgba(0, 0, 0, 0);
 	}
+}
+
+//offer section
+.offer {
 }
