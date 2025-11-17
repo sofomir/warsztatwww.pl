@@ -19,6 +19,7 @@ p {
 	position: relative;
 	height: 100%;
 	margin: 0 auto;
+	padding: variables.$border-paddinng-desktop;
 	max-width: 1300px;
 }
 
@@ -40,19 +41,29 @@ p {
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		gap: 20px;
 
 		p {
 			font-size: 2.5rem;
 		}
 
+		h1 {
+			margin: 10px 0 30px;
+		}
+
 		button {
 			padding: 15px 50px;
-			border: none;
+			border: 5px solid colors.$main-yellow;
 			font-size: 1.8rem;
 			font-family: 'Inter', sans-serif;
-			text-transform: uppercase;
-			background: lightcyan
+			font-weight: 700;
+			letter-spacing: 2px;
+			background-color: #0000;
+			transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		}
+
+		button:hover {
+			border: 5px solid colors.$main-yellow-light;
+			box-shadow: 0 0 5px colors.$main-yellow, 0 0 10px colors.$main-yellow, 0 0 20px colors.$main-yellow, inset 0 0 5px colors.$main-yellow, inset 0 0 10px colors.$main-yellow;
 		}
 	}
 }
@@ -62,7 +73,6 @@ p {
 .hero-main {
 	background-image: url('../img/gray-background-light_1000x667px.jpg');
 	color: colors.$main-black;
-	padding: variables.$border-paddinng-desktop;
 
 	&-bg {
 		background-color: rgba(0, 0, 0, 0);
@@ -71,4 +81,29 @@ p {
 
 //offer section
 .offer {
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		margin: 50px auto;
+	}
+
+	&-box {
+		display: flex;
+		margin: 30px 0px;
+
+		img {
+			width: 20%;
+			height: 100%;
+			margin-right: 30px;
+		}
+
+		&-content {
+			width: 80%;
+		}
+	}
+
+	&-box:nth-child(2n) {
+		flex-direction: row-reverse;
+	}
 }
