@@ -91,15 +91,28 @@ p {
 	&-box {
 		display: flex;
 		margin: 30px 0px;
+		gap: 30px;
 
-		img {
-			width: 20%;
-			height: 100%;
-			margin-right: 30px;
+		.offer-box-img {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 40%;
+
+			img {
+				width: 100%;
+			}
 		}
 
 		&-content {
-			width: 80%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 60%;
+
+			p {
+				margin: 20px 0;
+			}
 		}
 	}
 
