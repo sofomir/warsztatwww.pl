@@ -23,6 +23,46 @@ p {
 	max-width: 1300px;
 }
 
+//header section
+header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	z-index: 1;
+
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.nav-desktop {
+			height: 100%;
+
+			ul {
+				display: flex;
+				height: 100%;
+
+				li {
+					a {
+						display: block;
+						padding: 0 30px;
+						font-size: 2.2rem;
+						line-height: 60px;
+						font-weight: 600;
+						color: colors.$main-black;
+						transition: 0.3s transform;
+					}
+
+					a:hover {
+						
+					}
+				}
+			}
+		}
+	}
+}
+
 //hero section
 .hero {
 	position: relative;
@@ -58,12 +98,12 @@ p {
 			font-weight: 700;
 			letter-spacing: 2px;
 			background-color: #0000;
-			transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+			transition: border 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 		}
 
 		button:hover {
 			border: 5px solid colors.$main-yellow-light;
-			box-shadow: 0 0 5px colors.$main-yellow, 0 0 10px colors.$main-yellow, 0 0 20px colors.$main-yellow, inset 0 0 5px colors.$main-yellow, inset 0 0 10px colors.$main-yellow;
+			box-shadow: 0 0 5px colors.$main-yellow, 0 0 10px colors.$main-yellow, inset 0 0 5px colors.$main-yellow;
 		}
 	}
 }
@@ -91,7 +131,7 @@ p {
 
 		&-decoration {
 			bottom: 0;
-			right: 40%
+			right: 40%;
 		}
 	}
 }
