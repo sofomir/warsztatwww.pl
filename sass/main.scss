@@ -77,6 +77,23 @@ p {
 	&-bg {
 		background-color: rgba(0, 0, 0, 0);
 	}
+
+	&-content {
+		&-decoration,
+		&-www {
+			position: absolute;
+		}
+
+		&-www {
+			top: 10%;
+			right: 30%;
+		}
+
+		&-decoration {
+			bottom: 0;
+			right: 40%
+		}
+	}
 }
 
 //offer section

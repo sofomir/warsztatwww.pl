@@ -138,6 +138,17 @@ p {
 .hero-main-bg {
   background-color: rgba(0, 0, 0, 0);
 }
+.hero-main-content-decoration, .hero-main-content-www {
+  position: absolute;
+}
+.hero-main-content-www {
+  top: 10%;
+  right: 30%;
+}
+.hero-main-content-decoration {
+  bottom: 0;
+  right: 40%;
+}
 
 .offer .wrapper {
   display: flex;
