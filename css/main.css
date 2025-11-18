@@ -103,7 +103,21 @@ header {
 header .wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+header .wrapper .logo-www {
+  display: inline-block;
+  color: rgb(128, 255, 255);
+}
+header .wrapper .logo-text {
+  display: none;
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: display 0.3s ease-in-out;
+}
+header .wrapper .logo-www:hover ~ .logo-text {
+  display: inline-block;
 }
 header .wrapper .nav-desktop {
   height: 100%;
@@ -113,14 +127,29 @@ header .wrapper .nav-desktop ul {
   height: 100%;
 }
 header .wrapper .nav-desktop ul li a {
-  display: block;
+  display: inline-block;
+  position: relative;
   padding: 0 30px;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   line-height: 60px;
+  font-family: "Inter";
   font-weight: 600;
   color: #000;
-  transition: 0.3s transform;
 }
+header .wrapper .nav-desktop ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 15%;
+  width: 0;
+  border-bottom: 3px solid rgb(255, 255, 192);
+  transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+header .wrapper .nav-desktop ul li a:hover::after {
+  width: 70%;
+  box-shadow: 0 0 5px rgb(255, 255, 128), 0 0 10px rgb(255, 255, 128), inset 0 0 5px rgb(255, 255, 128);
+}
+
 .hero {
   position: relative;
   height: 100vh;
@@ -146,7 +175,7 @@ header .wrapper .nav-desktop ul li a {
 }
 .hero-content button {
   padding: 15px 50px;
-  border: 5px solid rgb(255, 255, 128);
+  border: 3px solid rgb(255, 255, 128);
   font-size: 1.8rem;
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -155,7 +184,7 @@ header .wrapper .nav-desktop ul li a {
   transition: border 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 .hero-content button:hover {
-  border: 5px solid rgb(255, 255, 192);
+  border: 3px solid rgb(255, 255, 192);
   box-shadow: 0 0 5px rgb(255, 255, 128), 0 0 10px rgb(255, 255, 128), inset 0 0 5px rgb(255, 255, 128);
 }
 
