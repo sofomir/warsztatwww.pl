@@ -97,34 +97,33 @@ header {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 80px;
+  height: 100px;
   z-index: 1;
 }
 header .wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-content: center;
 }
 header .wrapper .logo {
   display: flex;
+  margin-top: 20px;
 }
 header .wrapper .logo-www {
   display: inline-block;
-  font-size: 7rem;
-  font-family: "Playfair Display", serif;
-  line-height: 80px;
-  color: rgb(128, 255, 255);
+  cursor: pointer;
 }
 header .wrapper .logo-text {
   display: inline-block;
-  font-size: 4rem;
+  padding-left: 10px;
+  font-size: 3.5rem;
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  line-height: 80px;
+  line-height: 70px;
   letter-spacing: 2px;
-  color: #fff;
+  color: #000000;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 header .wrapper .logo-www:hover ~ .logo-text {
   opacity: 1;
@@ -141,15 +140,15 @@ header .wrapper .nav-desktop ul li a {
   position: relative;
   padding: 0 30px;
   font-size: 1.8rem;
-  line-height: 80px;
+  line-height: 100px;
   font-family: "Inter";
   font-weight: 600;
-  color: #000;
+  color: #000000;
 }
 header .wrapper .nav-desktop ul li a::after {
   content: "";
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   left: 20%;
   width: 0;
   border-bottom: 3px solid rgb(255, 255, 192);
@@ -159,10 +158,70 @@ header .wrapper .nav-desktop ul li a:hover::after {
   width: 60%;
   box-shadow: 0 0 5px rgb(255, 255, 128), 0 0 10px rgb(255, 255, 128), inset 0 0 5px rgb(255, 255, 128);
 }
+header .wrapper .nav-burger {
+  position: absolute;
+  padding-right: 80px;
+  top: 50px;
+  right: 0;
+  height: 100px;
+  cursor: pointer;
+}
+header .wrapper .nav-burger .line,
+header .wrapper .nav-burger .line::before,
+header .wrapper .nav-burger .line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 45px;
+  height: 4px;
+  background: #000000;
+  transition: transform 0.5s, top 0.3s, background 0.3s;
+  transform-origin: center;
+}
+header .wrapper .nav-burger .line {
+  position: relative;
+}
+header .wrapper .nav-burger .line::before {
+  top: -15px;
+}
+header .wrapper .nav-burger .line::after {
+  top: 15px;
+}
+header .wrapper .nav-burger .burger-x {
+  background: transparent;
+}
+header .wrapper .nav-burger .burger-x::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+header .wrapper .nav-burger .burger-x::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+header .nav-mobile {
+  position: fixed;
+  width: 100%;
+  padding: 40px 50px;
+  background-color: rgba(221, 221, 221, 0.9411764706);
+  transform: translateY(0%);
+  transition: transform 0.3s;
+}
+header .nav-mobile ul li {
+  margin-top: 30px;
+}
+header .nav-mobile ul li a {
+  font-family: "Inter", sans-serif;
+  font-size: 1.8rem;
+  color: #000000;
+}
+header .nav-mobile-show {
+  transform: translateY(0%);
+}
 
 .hero {
   position: relative;
   height: 100vh;
+  min-height: 600px;
   background-size: cover;
   background-position: center;
 }
@@ -170,7 +229,7 @@ header .wrapper .nav-desktop ul li a:hover::after {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .hero-content {
   display: flex;
@@ -199,22 +258,24 @@ header .wrapper .nav-desktop ul li a:hover::after {
 }
 
 .hero-main {
-  background-image: url("../img/gray-background-light_1000x667px.jpg");
-  color: #000;
-}
-.hero-main-bg {
-  background-color: rgba(0, 0, 0, 0);
+  background-image: url("../img/gray-background[1].jpg");
+  color: #000000;
 }
 .hero-main-content-decoration, .hero-main-content-www {
   position: absolute;
+  display: flex;
+  justify-content: center;
 }
 .hero-main-content-www {
-  top: 10%;
-  right: 30%;
+  display: flex;
+  justify-content: center;
+  top: 120px;
+  right: 10%;
+  background-color: rgba(255, 255, 255, 0.9411764706);
 }
 .hero-main-content-decoration {
   bottom: 0;
-  right: 40%;
+  right: 30%;
 }
 
 .offer .wrapper {
@@ -248,4 +309,10 @@ header .wrapper .nav-desktop ul li a:hover::after {
 }
 .offer-box:nth-child(2n) {
   flex-direction: row-reverse;
+}
+
+@media (max-width: 900px) {
+  .nav-desktop {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
