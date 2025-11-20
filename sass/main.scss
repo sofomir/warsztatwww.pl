@@ -1,6 +1,7 @@
 @use './reset';
 @use './colors';
 @use './variables';
+@use './animations';
 
 h1,
 h2,
@@ -42,6 +43,7 @@ header {
 
 			&-www {
 				height: 100%;
+				animation: heartbeat 3s infinite 10s;
 			}
 
 			&-text {
@@ -106,7 +108,7 @@ header {
 			justify-content: center;
 			padding: 5px;
 			top: 40px;
-			right: 80px;
+			right: 50px;
 			height: 45px;
 			cursor: pointer;
 
@@ -273,7 +275,14 @@ header {
 //mobile max-width: 900px
 
 @media (max-width: 900px) {
+	.wrapper {
+		padding: variables.$border-paddinng-mobile;
+	}
+
 	header {
+		position: fixed;
+		height: 80px;
+		background-color: colors.$main-gray-opacity-f0;
 		transition: top 0.3s ease-in-out;
 
 		.wrapper {
@@ -281,19 +290,27 @@ header {
 
 			.logo {
 				position: fixed;
-				padding-left: 50px;
-				height: 80px;
+				padding-left: 20px;
+				margin-top: 10px;
+				height: 60px;
 				z-index: 1;
+
+				&-text {
+					padding-left: 5px;
+					font-size: 2.5rem;
+					line-height: 55px;
+				}
 			}
 
 			.nav-main {
 				position: fixed;
 				width: 100%;
 				height: auto;
-				padding: 120px 80px 40px 70px;
+				padding: 80px 30px 40px;
 				background-color: colors.$main-gray-opacity-f0;
+				opacity: 0;
 				transform: translateY(-100%);
-				transition: transform 0.3s;
+				transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
 				ul {
 					flex-direction: column;
@@ -325,18 +342,21 @@ header {
 			.nav-main::before {
 				content: '';
 				position: absolute;
-				top: 120px;
-				left: 5%;
-				width: 90%;
+				top: 80px;
+				left: 2.5%;
+				width: 95%;
 				border-bottom: 3px solid colors.$main-blue;
 			}
 
 			.nav-main-show {
+				opacity: 1;
 				transform: translateY(0%);
 			}
 
 			.nav-burger {
 				display: flex;
+				top: 15px;
+				right: 20px;
 				transition: top 0.3s ease-in-out;
 			}
 		}
@@ -344,6 +364,7 @@ header {
 
 	.header-hide {
 		top: -100px;
+		opacity: 1;
 
 		.wrapper {
 			.nav-burger {
