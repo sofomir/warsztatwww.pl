@@ -128,24 +128,24 @@ header .wrapper .logo-text {
 header .wrapper .logo-www:hover ~ .logo-text {
   opacity: 1;
 }
-header .wrapper .nav-desktop {
+header .wrapper .nav-main {
   height: 100%;
 }
-header .wrapper .nav-desktop ul {
+header .wrapper .nav-main ul {
   display: flex;
   height: 100%;
 }
-header .wrapper .nav-desktop ul li a {
+header .wrapper .nav-main ul li a {
   display: inline-block;
   position: relative;
   padding: 0 30px;
   font-size: 1.8rem;
   line-height: 100px;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #000000;
 }
-header .wrapper .nav-desktop ul li a::after {
+header .wrapper .nav-main ul li a::after {
   content: "";
   position: absolute;
   bottom: 30px;
@@ -154,21 +154,22 @@ header .wrapper .nav-desktop ul li a::after {
   border-bottom: 3px solid rgb(255, 255, 192);
   transition: width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-header .wrapper .nav-desktop ul li a:hover::after {
+header .wrapper .nav-main ul li a:hover::after {
   width: 60%;
   box-shadow: 0 0 5px rgb(255, 255, 128), 0 0 10px rgb(255, 255, 128), inset 0 0 5px rgb(255, 255, 128);
 }
 header .wrapper .nav-burger {
   position: absolute;
-  padding-right: 80px;
-  top: 50px;
-  right: 0;
-  height: 100px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  top: 40px;
+  right: 80px;
+  height: 45px;
   cursor: pointer;
 }
-header .wrapper .nav-burger .line,
-header .wrapper .nav-burger .line::before,
-header .wrapper .nav-burger .line::after {
+header .wrapper .nav-burger-line, header .wrapper .nav-burger-line::before, header .wrapper .nav-burger-line::after {
   content: "";
   display: block;
   position: absolute;
@@ -178,44 +179,25 @@ header .wrapper .nav-burger .line::after {
   transition: transform 0.5s, top 0.3s, background 0.3s;
   transform-origin: center;
 }
-header .wrapper .nav-burger .line {
+header .wrapper .nav-burger-line {
   position: relative;
 }
-header .wrapper .nav-burger .line::before {
+header .wrapper .nav-burger-line::before {
   top: -15px;
 }
-header .wrapper .nav-burger .line::after {
+header .wrapper .nav-burger-line::after {
   top: 15px;
 }
-header .wrapper .nav-burger .burger-x {
+header .wrapper .nav-burger .nav-burger-x {
   background: transparent;
 }
-header .wrapper .nav-burger .burger-x::before {
+header .wrapper .nav-burger .nav-burger-x::before {
   top: 0;
   transform: rotate(45deg);
 }
-header .wrapper .nav-burger .burger-x::after {
+header .wrapper .nav-burger .nav-burger-x::after {
   top: 0;
   transform: rotate(-45deg);
-}
-header .nav-mobile {
-  position: fixed;
-  width: 100%;
-  padding: 40px 50px;
-  background-color: rgba(221, 221, 221, 0.9411764706);
-  transform: translateY(0%);
-  transition: transform 0.3s;
-}
-header .nav-mobile ul li {
-  margin-top: 30px;
-}
-header .nav-mobile ul li a {
-  font-family: "Inter", sans-serif;
-  font-size: 1.8rem;
-  color: #000000;
-}
-header .nav-mobile-show {
-  transform: translateY(0%);
 }
 
 .hero {
@@ -312,7 +294,55 @@ header .nav-mobile-show {
 }
 
 @media (max-width: 900px) {
-  .nav-desktop {
-    display: none;
+  header .wrapper {
+    padding: 0;
+  }
+  header .wrapper .logo {
+    padding-left: 50px;
+    z-index: 1;
+  }
+  header .wrapper .nav-main {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    padding: 120px 80px 40px 70px;
+    background-color: rgba(221, 221, 221, 0.9411764706);
+    transform: translateY(0%);
+    transition: transform 0.3s;
+  }
+  header .wrapper .nav-main ul {
+    flex-direction: column;
+  }
+  header .wrapper .nav-main ul li {
+    margin-top: 30px;
+    justify-content: flex-end;
+    text-align: right;
+  }
+  header .wrapper .nav-main ul li a {
+    padding: 0;
+    line-height: normal;
+    color: #000000;
+  }
+  header .wrapper .nav-main ul li a::after {
+    bottom: -10px;
+    left: -10%;
+    width: 0;
+  }
+  header .wrapper .nav-main ul li a:hover::after {
+    width: 120%;
+  }
+  header .wrapper .nav-main::before {
+    content: "";
+    position: absolute;
+    top: 120px;
+    left: 5%;
+    width: 90%;
+    border-bottom: 3px solid rgb(128, 255, 255);
+  }
+  header .wrapper .nav-main-show {
+    transform: translateY(0%);
+  }
+  header .wrapper .nav-burger {
+    display: flex;
   }
 }/*# sourceMappingURL=main.css.map */
