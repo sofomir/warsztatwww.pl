@@ -50,33 +50,12 @@ header {
 				background-repeat: no-repeat;
 				background-position: center;
 				transition: background-image 0.3s ease-in-out;
-
-				&:hover {
-					background-image: url('../img/logo-www-white.png');
-				}
-			}
-
-			&-text {
-				display: inline-block;
-				padding-left: 5px;
-				font-size: 3.5rem;
-				font-family: 'Playfair Display', serif;
-				font-weight: 700;
-				line-height: calc(variables.$nav-height - 15px);
-				letter-spacing: 2px;
-				color: colors.$main-white;
-				opacity: 0;
-				transition: opacity 0.3s ease-in-out;
-			}
-
-			a:hover ~ .logo-text {
-				opacity: 1;
 			}
 		}
 
 		.nav-main {
 			height: 100%;
-			background-color: colors.$main-black-opacity85;
+			background-color: colors.$main-black-opacity50;
 
 			ul {
 				display: flex;
@@ -192,6 +171,9 @@ header {
 			&-picture {
 				position: absolute;
 				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 				bottom: 10%;
 				right: 5%;
 				height: 60%;
@@ -204,23 +186,31 @@ header {
 					background-color: colors.$main-white-opacity-15;
 				}
 
-				p {
-					display: inline-block;
-					margin: auto;
-					font-size: 10vw;
+				&-text,
+				&-letters {
+					margin: 0;
+					line-height: 1;
 					font-family: 'Playfair Display', sans-serif;
 				}
 
-				&-w1 {
-					color: colors.$main-yellow;
+				&-text {
+					font-size: 5vw;
 				}
 
-				&-w2 {
-					color: colors.$main-blue;
-				}
+				&-letters {
+					font-size: 10vw;
 
-				&-w3 {
-					color: colors.$main-purple;
+					&-w1 {
+						color: colors.$main-yellow;
+					}
+
+					&-w2 {
+						color: colors.$main-blue;
+					}
+
+					&-w3 {
+						color: colors.$main-purple;
+					}
 				}
 			}
 		}
@@ -308,8 +298,14 @@ header {
 //media queries
 //mobile min-width: 1600px
 @media (min-width: 1600px) {
-	.hero-content-www-picture p {
-		font-size: 160px;
+	.hero-content-www-picture {
+		&-text {
+			font-size: 80px;
+		}
+
+		&-letters {
+			font-size: 160px;
+		}
 	}
 
 	.hero-main {
@@ -343,12 +339,6 @@ header {
 					width: 60px;
 					height: 60px;
 				}
-
-				&-text {
-					padding-left: 5px;
-					font-size: 2.5rem;
-					line-height: 65px;
-				}
 			}
 
 			.nav-main {
@@ -356,6 +346,7 @@ header {
 				width: 100%;
 				height: auto;
 				padding: 80px 30px 40px;
+				background-color: colors.$main-black-opacity85;
 				opacity: 0;
 				transform: translateY(-100%);
 				transition: transform 0.3s ease-in-out, opacity 0.1s ease-in-out;
@@ -436,7 +427,11 @@ header {
 				&-picture {
 					width: 80%;
 
-					p {
+					&-text {
+						font-size: 7vw;
+					}
+
+					&-leters {
 						font-size: 14vw;
 					}
 				}
@@ -447,6 +442,10 @@ header {
 
 				p {
 					font-size: 2rem;
+				}
+
+				button {
+					padding: 10px 30px;
 				}
 			}
 		}

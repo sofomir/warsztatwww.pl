@@ -140,27 +140,9 @@ header .wrapper .logo-img {
   background-position: center;
   transition: background-image 0.3s ease-in-out;
 }
-header .wrapper .logo-img:hover {
-  background-image: url("../img/logo-www-white.png");
-}
-header .wrapper .logo-text {
-  display: inline-block;
-  padding-left: 5px;
-  font-size: 3.5rem;
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  line-height: 85px;
-  letter-spacing: 2px;
-  color: rgb(255, 255, 255);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-header .wrapper .logo a:hover ~ .logo-text {
-  opacity: 1;
-}
 header .wrapper .nav-main {
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 header .wrapper .nav-main ul {
   display: flex;
@@ -256,6 +238,9 @@ header .wrapper .nav-burger .nav-burger-x::after {
 .hero-content-www-picture {
   position: absolute;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   bottom: 10%;
   right: 5%;
   height: 60%;
@@ -266,19 +251,24 @@ header .wrapper .nav-burger .nav-burger-x::after {
 .hero-content-www-picture:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
-.hero-content-www-picture p {
-  display: inline-block;
-  margin: auto;
-  font-size: 10vw;
+.hero-content-www-picture-text, .hero-content-www-picture-letters {
+  margin: 0;
+  line-height: 1;
   font-family: "Playfair Display", sans-serif;
 }
-.hero-content-www-picture-w1 {
+.hero-content-www-picture-text {
+  font-size: 5vw;
+}
+.hero-content-www-picture-letters {
+  font-size: 10vw;
+}
+.hero-content-www-picture-letters-w1 {
   color: rgb(255, 255, 128);
 }
-.hero-content-www-picture-w2 {
+.hero-content-www-picture-letters-w2 {
   color: rgb(128, 255, 255);
 }
-.hero-content-www-picture-w3 {
+.hero-content-www-picture-letters-w3 {
   color: rgb(255, 128, 255);
 }
 .hero-content-main {
@@ -345,7 +335,10 @@ header .wrapper .nav-burger .nav-burger-x::after {
 }
 
 @media (min-width: 1600px) {
-  .hero-content-www-picture p {
+  .hero-content-www-picture-text {
+    font-size: 80px;
+  }
+  .hero-content-www-picture-letters {
     font-size: 160px;
   }
   .hero-main {
@@ -375,16 +368,12 @@ header .wrapper .nav-burger .nav-burger-x::after {
     width: 60px;
     height: 60px;
   }
-  header .wrapper .logo-text {
-    padding-left: 5px;
-    font-size: 2.5rem;
-    line-height: 65px;
-  }
   header .wrapper .nav-main {
     position: fixed;
     width: 100%;
     height: auto;
     padding: 80px 30px 40px;
+    background-color: rgba(0, 0, 0, 0.85);
     opacity: 0;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out, opacity 0.1s ease-in-out;
@@ -448,7 +437,10 @@ header .wrapper .nav-burger .nav-burger-x::after {
   .hero-content-www-picture {
     width: 80%;
   }
-  .hero-content-www-picture p {
+  .hero-content-www-picture-text {
+    font-size: 7vw;
+  }
+  .hero-content-www-picture-leters {
     font-size: 14vw;
   }
   .hero-content-main {
@@ -456,6 +448,9 @@ header .wrapper .nav-burger .nav-burger-x::after {
   }
   .hero-content-main p {
     font-size: 2rem;
+  }
+  .hero-content-main button {
+    padding: 10px 30px;
   }
   .hero-main {
     background-image: url("../img/modern-office-desk-gray[1]_1000x667px.jpg");

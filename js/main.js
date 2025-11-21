@@ -34,7 +34,7 @@ window.addEventListener('scroll', () => {
 	} else {
 		headerHide.classList.remove('header-hide')
 	}
-	if (currentScrollY > 200) {
+	if (currentScrollY > 100) {
 		headerHide.classList.add('header-bgc')
 	} else {
 		headerHide.classList.remove('header-bgc')
