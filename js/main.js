@@ -41,3 +41,14 @@ window.addEventListener('scroll', () => {
 	}
 	lastScroll = currentScrollY
 })
+
+//picture WWW color change
+const lettersWWW = document.querySelectorAll('.hero-content-www-picture p span');
+
+logoBtn.addEventListener('mouseenter', () => {
+    lettersWWW.forEach(letter => letter.style.color = '');
+});
+
+logoBtn.addEventListener('mouseleave', () => {
+    lettersWWW.forEach(letter => letter.style.color = 'white');
+});

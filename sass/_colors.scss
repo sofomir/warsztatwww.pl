@@ -1,14 +1,12 @@
 $main-black: rgb(0, 0, 0);
+$main-black-opacity15: rgba(0, 0, 0, 0.15);
 $main-black-opacity50: rgba(0, 0, 0, 0.5);
 $main-black-opacity85: rgba(0, 0, 0, 0.85);
 $main-white: rgb(255, 255, 255);
-$main-white-opacity-f0: #fffffff0;
-$main-white-opacity-80: #ffffff80;
-$main-white-opacity-0f: #ffffff0f;
+$main-white-opacity-15: rgba(255, 255, 255, 0.15);
+$main-white-opacity-50: rgba(255, 255, 255, 0.50);
+$main-white-opacity-85: rgba(255, 255, 255, 0.85);
 $main-gray: rgb(221, 221, 221);
-$main-gray-opacity-f0: #ddddddf0;
-$main-gray-opacity-80: #dddddd80;
-$main-gray-opacity-0f: #dddddd0f;
 $main-yellow: rgba(255, 255, 128);
 $main-yellow-light: rgb(255, 255, 192);
 $main-blue: rgb(128, 255, 255);

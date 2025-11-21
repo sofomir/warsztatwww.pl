@@ -41,18 +41,28 @@ header {
 			display: flex;
 			margin-top: 20px;
 
-			&-www {
-				height: 100%;
+			&-img {
 				animation: heartbeat 3s infinite 10s;
+				width: 80px;
+				height: 80px;
+				background-image: url('../img/logo-www.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				transition: background-image 0.6s ease-in-out;
+
+				&:hover {
+					background-image: url('../img/logo-www-white.png');
+				}
 			}
 
 			&-text {
 				display: inline-block;
-				padding-left: 10px;
+				padding-left: 5px;
 				font-size: 3.5rem;
 				font-family: 'Playfair Display', serif;
 				font-weight: 700;
-				line-height: calc(variables.$nav-height - 30px);
+				line-height: calc(variables.$nav-height - 15px);
 				letter-spacing: 2px;
 				color: colors.$main-white;
 				opacity: 0;
@@ -70,6 +80,7 @@ header {
 
 			ul {
 				display: flex;
+				padding: 0 20px;
 				height: 100%;
 
 				li {
@@ -186,7 +197,7 @@ header {
 				right: 5%;
 				height: 60%;
 				width: 50%;
-				background-color: colors.$main-white-opacity-0f;
+				background-color: colors.$main-white-opacity-15;
 				border: 5px double colors.$main-white;
 				transition: box-shadow 0.3s ease-in-out;
 
@@ -199,6 +210,12 @@ header {
 					margin: auto;
 					font-size: 10vw;
 					font-family: 'Playfair Display', sans-serif;
+				}
+
+				&-w1,
+				&-w2,
+				&-w3 {
+					transition: color 0.6s ease-in-out;
 				}
 
 				&-w1 {
@@ -236,7 +253,7 @@ header {
 				font-family: 'Inter', sans-serif;
 				font-weight: 700;
 				color: colors.$main-white;
-				background-color: colors.$main-white-opacity-0f;
+				background-color: colors.$main-white-opacity-15;
 				transition: border 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 
 				&:hover {
@@ -330,10 +347,15 @@ header {
 				height: 60px;
 				z-index: 1;
 
+				&-img {
+					width: 60px;
+					height: 60px;
+				}
+
 				&-text {
 					padding-left: 5px;
 					font-size: 2.5rem;
-					line-height: 55px;
+					line-height: 65px;
 				}
 			}
 
@@ -348,6 +370,7 @@ header {
 
 				ul {
 					flex-direction: column;
+					padding: 0;
 
 					li {
 						margin-top: 30px;
@@ -389,7 +412,7 @@ header {
 
 			.nav-burger {
 				display: flex;
-				top: 15px;
+				top: 17.5px;
 				right: 20px;
 				transition: top 0.3s ease-in-out;
 			}
