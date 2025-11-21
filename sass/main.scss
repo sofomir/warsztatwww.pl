@@ -198,7 +198,7 @@ header {
 				height: 60%;
 				width: 50%;
 				background-color: colors.$main-white-opacity-15;
-				border: 5px double colors.$main-white;
+				border: 5px solid colors.$main-white;
 				transition: box-shadow 0.3s ease-in-out;
 
 				&:hover {
