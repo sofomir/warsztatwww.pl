@@ -142,7 +142,7 @@ header .wrapper .logo-text {
   font-weight: 700;
   line-height: 70px;
   letter-spacing: 2px;
-  color: #000000;
+  color: rgb(255, 255, 255);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
@@ -151,6 +151,7 @@ header .wrapper .logo a:hover ~ .logo-text {
 }
 header .wrapper .nav-main {
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 header .wrapper .nav-main ul {
   display: flex;
@@ -164,7 +165,7 @@ header .wrapper .nav-main ul li a {
   line-height: 100px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  color: #000000;
+  color: rgb(255, 255, 255);
 }
 header .wrapper .nav-main ul li a::after {
   content: "";
@@ -196,7 +197,7 @@ header .wrapper .nav-burger-line, header .wrapper .nav-burger-line::before, head
   position: absolute;
   width: 45px;
   height: 4px;
-  background: #000000;
+  background: rgb(255, 255, 255);
   transition: transform 0.5s, top 0.3s, background 0.3s;
   transform-origin: center;
 }
@@ -232,53 +233,75 @@ header .wrapper .nav-burger .nav-burger-x::after {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .hero-content {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-.hero-content p {
+.hero-content-www {
+  position: relative;
+  height: 60%;
+}
+.hero-content-www-picture {
+  position: absolute;
+  display: flex;
+  bottom: 10%;
+  right: 5%;
+  height: 60%;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.0588235294);
+  border: 5px double rgb(255, 255, 255);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.hero-content-www-picture:hover {
+  box-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), inset 0 0 5px rgb(221, 221, 221);
+}
+.hero-content-www-picture p {
+  display: inline-block;
+  margin: auto;
+  font-size: 10vw;
+  font-family: "Playfair Display", sans-serif;
+}
+.hero-content-www-picture-w1 {
+  color: rgb(255, 255, 128);
+}
+.hero-content-www-picture-w2 {
+  color: rgb(128, 255, 255);
+}
+.hero-content-www-picture-w3 {
+  color: rgb(255, 128, 255);
+}
+.hero-content-main {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+}
+.hero-content-main p {
   font-size: 2.5rem;
 }
-.hero-content h1 {
+.hero-content-main h1 {
   margin: 10px 0 30px;
 }
-.hero-content button {
+.hero-content-main button {
   padding: 15px 50px;
   border: 3px solid rgb(255, 255, 128);
   font-size: 1.8rem;
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  letter-spacing: 2px;
-  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.0588235294);
   transition: border 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-.hero-content button:hover {
+.hero-content-main button:hover {
   border: 3px solid rgb(255, 255, 192);
   box-shadow: 0 0 5px rgb(255, 255, 128), 0 0 10px rgb(255, 255, 128), inset 0 0 5px rgb(255, 255, 128);
 }
 
 .hero-main {
-  background-image: url("../img/gray-background[1].jpg");
-  color: #000000;
-}
-.hero-main-content-decoration, .hero-main-content-www {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-}
-.hero-main-content-www {
-  display: flex;
-  justify-content: center;
-  top: 120px;
-  right: 10%;
-  background-color: rgba(255, 255, 255, 0.9411764706);
-}
-.hero-main-content-decoration {
-  bottom: 0;
-  right: 30%;
+  background-image: url("../img/modern-office-desk-gray[1]_1500x1000px.jpg");
+  color: rgb(255, 255, 255);
 }
 
 .offer .wrapper {
@@ -314,6 +337,14 @@ header .wrapper .nav-burger .nav-burger-x::after {
   flex-direction: row-reverse;
 }
 
+@media (min-width: 1600px) {
+  .hero-content-www-picture p {
+    font-size: 160px;
+  }
+  .hero-main {
+    background-image: url("../img/modern-office-desk-gray[1]_2000x1333px.jpg");
+  }
+}
 @media (max-width: 900px) {
   .wrapper {
     padding: 0 20px;
@@ -321,8 +352,7 @@ header .wrapper .nav-burger .nav-burger-x::after {
   header {
     position: fixed;
     height: 80px;
-    background-color: rgba(221, 221, 221, 0.9411764706);
-    transition: top 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
   header .wrapper {
     padding: 0;
@@ -344,10 +374,9 @@ header .wrapper .nav-burger .nav-burger-x::after {
     width: 100%;
     height: auto;
     padding: 80px 30px 40px;
-    background-color: rgba(221, 221, 221, 0.9411764706);
     opacity: 0;
     transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.1s ease-in-out;
   }
   header .wrapper .nav-main ul {
     flex-direction: column;
@@ -360,7 +389,7 @@ header .wrapper .nav-burger .nav-burger-x::after {
   header .wrapper .nav-main ul li a {
     padding: 0;
     line-height: normal;
-    color: #000000;
+    color: rgb(255, 255, 255);
   }
   header .wrapper .nav-main ul li a::after {
     bottom: -10px;
@@ -394,5 +423,26 @@ header .wrapper .nav-burger .nav-burger-x::after {
   }
   .header-hide .wrapper .nav-burger {
     top: -40px;
+  }
+  .header-bgc {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  .hero-content-www {
+    height: 45%;
+  }
+  .hero-content-www-picture {
+    width: 70%;
+  }
+  .hero-content-www-picture p {
+    font-size: 14vw;
+  }
+  .hero-content-main {
+    height: 55%;
+  }
+  .hero-content-main p {
+    font-size: 2rem;
+  }
+  .hero-main {
+    background-image: url("../img/modern-office-desk-gray[1]_1000x667px.jpg");
   }
 }/*# sourceMappingURL=main.css.map */

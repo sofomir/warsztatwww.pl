@@ -54,7 +54,7 @@ header {
 				font-weight: 700;
 				line-height: calc(variables.$nav-height - 30px);
 				letter-spacing: 2px;
-				color: colors.$main-black;
+				color: colors.$main-white;
 				opacity: 0;
 				transition: opacity 0.3s ease-in-out;
 			}
@@ -66,6 +66,7 @@ header {
 
 		.nav-main {
 			height: 100%;
+			background-color: colors.$main-black-opacity85;
 
 			ul {
 				display: flex;
@@ -80,7 +81,7 @@ header {
 						line-height: variables.$nav-height;
 						font-family: 'Inter', sans-serif;
 						font-weight: 600;
-						color: colors.$main-black;
+						color: colors.$main-white;
 
 						&::after {
 							content: '';
@@ -120,7 +121,7 @@ header {
 				position: absolute;
 				width: 45px;
 				height: 4px;
-				background: colors.$main-black;
+				background: colors.$main-white;
 				transition: transform 0.5s, top 0.3s, background 0.3s;
 				transform-origin: center;
 			}
@@ -166,7 +167,7 @@ header {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, 0.1);
+		background-color: colors.$main-black-opacity50;
 	}
 
 	&-content {
@@ -174,59 +175,83 @@ header {
 		justify-content: center;
 		flex-direction: column;
 
-		p {
-			font-size: 2.5rem;
+		&-www {
+			position: relative;
+			height: 60%;
+
+			&-picture {
+				position: absolute;
+				display: flex;
+				bottom: 10%;
+				right: 5%;
+				height: 60%;
+				width: 50%;
+				background-color: colors.$main-white-opacity-0f;
+				border: 5px double colors.$main-white;
+				transition: box-shadow 0.3s ease-in-out;
+
+				&:hover {
+					box-shadow: 0 0 5px colors.$main-white, 0 0 10px colors.$main-white, 0 0 20px colors.$main-white, inset 0 0 5px colors.$main-gray;
+				}
+
+				p {
+					display: inline-block;
+					margin: auto;
+					font-size: 10vw;
+					font-family: 'Playfair Display', sans-serif;
+				}
+
+				&-w1 {
+					color: colors.$main-yellow;
+				}
+
+				&-w2 {
+					color: colors.$main-blue;
+				}
+
+				&-w3 {
+					color: colors.$main-purple;
+				}
+			}
 		}
 
-		h1 {
-			margin: 10px 0 30px;
-		}
+		&-main {
+			display: flex;
 
-		button {
-			padding: 15px 50px;
-			border: 3px solid colors.$main-yellow;
-			font-size: 1.8rem;
-			font-family: 'Inter', sans-serif;
-			font-weight: 700;
-			letter-spacing: 2px;
-			background-color: #0000;
-			transition: border 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+			flex-direction: column;
+			height: 40%;
 
-			&:hover {
-				border: 3px solid colors.$main-yellow-light;
-				box-shadow: 0 0 5px colors.$main-yellow, 0 0 10px colors.$main-yellow, inset 0 0 5px colors.$main-yellow;
+			p {
+				font-size: 2.5rem;
+			}
+
+			h1 {
+				margin: 10px 0 30px;
+			}
+
+			button {
+				padding: 15px 50px;
+				border: 3px solid colors.$main-yellow;
+				font-size: 1.8rem;
+				font-family: 'Inter', sans-serif;
+				font-weight: 700;
+				color: colors.$main-white;
+				background-color: colors.$main-white-opacity-0f;
+				transition: border 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+
+				&:hover {
+					border: 3px solid colors.$main-yellow-light;
+					box-shadow: 0 0 5px colors.$main-yellow, 0 0 10px colors.$main-yellow, inset 0 0 5px colors.$main-yellow;
+				}
 			}
 		}
 	}
 }
 
 //hero section - main hero
-
 .hero-main {
-	background-image: url('../img/gray-background[1].jpg');
-	color: colors.$main-black;
-
-	&-content {
-		&-decoration,
-		&-www {
-			position: absolute;
-			display: flex;
-			justify-content: center;
-		}
-
-		&-www {
-			display: flex;
-			justify-content: center;
-			top: 120px;
-			right: 10%;
-			background-color: colors.$main-white-opacity-f0;
-		}
-
-		&-decoration {
-			bottom: 0;
-			right: 30%;
-		}
-	}
+	background-image: url('../img/modern-office-desk-gray[1]_1500x1000px.jpg');
+	color: colors.$main-white;
 }
 
 //offer section
@@ -272,6 +297,17 @@ header {
 }
 
 //media queries
+//mobile min-width: 1600px
+@media (min-width: 1600px) {
+	.hero-content-www-picture p {
+		font-size: 160px;
+	}
+
+	.hero-main {
+		background-image: url('../img/modern-office-desk-gray[1]_2000x1333px.jpg');
+	}
+}
+
 //mobile max-width: 900px
 
 @media (max-width: 900px) {
@@ -282,8 +318,7 @@ header {
 	header {
 		position: fixed;
 		height: 80px;
-		background-color: colors.$main-gray-opacity-f0;
-		transition: top 0.3s ease-in-out;
+		transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
 		.wrapper {
 			padding: 0;
@@ -307,10 +342,9 @@ header {
 				width: 100%;
 				height: auto;
 				padding: 80px 30px 40px;
-				background-color: colors.$main-gray-opacity-f0;
 				opacity: 0;
 				transform: translateY(-100%);
-				transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+				transition: transform 0.3s ease-in-out, opacity 0.1s ease-in-out;
 
 				ul {
 					flex-direction: column;
@@ -323,7 +357,7 @@ header {
 						a {
 							padding: 0;
 							line-height: normal;
-							color: colors.$main-black;
+							color: colors.$main-white;
 
 							&::after {
 								bottom: -10px;
@@ -371,5 +405,37 @@ header {
 				top: -40px;
 			}
 		}
+	}
+
+	.header-bgc {
+		background-color: colors.$main-black-opacity85;
+	}
+
+	.hero {
+		&-content {
+			&-www {
+				height: 45%;
+
+				&-picture {
+					width: 70%;
+
+					p {
+						font-size: 14vw;
+					}
+				}
+			}
+
+			&-main {
+				height: 55%;
+
+				p {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+
+	.hero-main {
+		background-image: url('../img/modern-office-desk-gray[1]_1000x667px.jpg');
 	}
 }

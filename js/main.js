@@ -20,7 +20,6 @@ const closeMenu = () => {
 
 ;[...navItems, logoBtn].forEach((element) => {
 	element.addEventListener('click', closeMenu)
-    // headerHide.classList.add('header-hide')
 })
 
 //hiding/showing header when scrolling
@@ -29,9 +28,16 @@ let lastScroll = 0
 window.addEventListener('scroll', () => {
 	const currentScrollY = window.scrollY
 	if (currentScrollY > lastScroll) {
-		if (!nav.classList.contains('nav-main-show')) headerHide.classList.add('header-hide')
+		if (!nav.classList.contains('nav-main-show')) {
+			headerHide.classList.add('header-hide')
+		}
 	} else {
 		headerHide.classList.remove('header-hide')
+	}
+	if (currentScrollY > 200) {
+		headerHide.classList.add('header-bgc')
+	} else {
+		headerHide.classList.remove('header-bgc')
 	}
 	lastScroll = currentScrollY
 })
