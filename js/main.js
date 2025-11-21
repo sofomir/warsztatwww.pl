@@ -42,13 +42,13 @@ window.addEventListener('scroll', () => {
 	lastScroll = currentScrollY
 })
 
-// //picture WWW color change
-// const lettersWWW = document.querySelectorAll('.hero-content-www-picture p span');
+//picture WWW color change
+const pictureBgc = document.querySelector('.hero-content-www-picture');
 
-// logoBtn.addEventListener('mouseenter', () => {
-//     lettersWWW.forEach(letter => letter.style.color = '');
-// });
+logoBtn.addEventListener('mouseenter', () => {
+    pictureBgc.style.backgroundColor = 'rgba(255,255,255,0.15)'
+});
 
-// logoBtn.addEventListener('mouseleave', () => {
-//     lettersWWW.forEach(letter => letter.style.color = 'white');
-// });
+logoBtn.addEventListener('mouseleave', () => {
+    pictureBgc.style.backgroundColor = ''
+});
