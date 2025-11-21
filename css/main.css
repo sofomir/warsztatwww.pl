@@ -235,7 +235,7 @@ header .wrapper .nav-burger .nav-burger-x::after {
 .hero {
   position: relative;
   height: 100vh;
-  min-height: 600px;
+  min-height: 700px;
   background-size: cover;
   background-position: center;
 }
@@ -444,6 +444,9 @@ header .wrapper .nav-burger .nav-burger-x::after {
   }
   .header-bgc {
     background-color: rgba(0, 0, 0, 0.85);
+  }
+  .hero {
+    min-height: 600px;
   }
   .hero-content-www {
     height: 45%;

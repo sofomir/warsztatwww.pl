@@ -170,7 +170,7 @@ header {
 .hero {
 	position: relative;
 	height: 100vh;
-	min-height: 600px;
+	min-height: 700px;
 	background-size: cover;
 	background-position: center;
 
@@ -435,6 +435,8 @@ header {
 	}
 
 	.hero {
+		min-height: 600px;
+
 		&-content {
 			&-www {
 				height: 45%;
