@@ -268,10 +268,6 @@ header .wrapper .nav-burger .nav-burger-x::after {
   min-height: 400px;
   width: 100%;
   border: 5px solid rgb(0, 0, 0);
-  transition: background-color 0.3s ease-in-out;
-}
-.hero-content-www-picture:hover {
-  background-color: rgba(255, 255, 255, 0.15);
 }
 .hero-content-main {
   display: flex;

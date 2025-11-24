@@ -41,14 +41,3 @@ window.addEventListener('scroll', () => {
 	}
 	lastScroll = currentScrollY
 })
-
-//picture WWW color change
-const pictureBgc = document.querySelector('.hero-content-www-picture');
-
-logoBtn.addEventListener('mouseenter', () => {
-    pictureBgc.style.backgroundColor = 'rgba(255, 255, 255, 0.5)'
-});
-
-logoBtn.addEventListener('mouseleave', () => {
-    pictureBgc.style.backgroundColor = ''
-});
