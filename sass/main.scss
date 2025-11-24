@@ -290,23 +290,6 @@ header {
 }
 
 //media queries
-//mobile min-width: 1700px
-@media (min-width: 1700px) {
-	.hero-content-www-picture {
-		&-text {
-			font-size: 80px;
-		}
-
-		&-letters {
-			font-size: 160px;
-		}
-	}
-
-	.hero-main {
-		background-image: url('../img/modern-office-desk-gray[1]_2000x1333px.jpg');
-	}
-}
-
 //mobile max-width: 900px
 
 @media (max-width: 900px) {
