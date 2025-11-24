@@ -128,21 +128,41 @@ header .wrapper {
 }
 header .wrapper .logo {
   display: flex;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 header .wrapper .logo-img {
   animation: heartbeat 3s infinite 10s;
   width: 80px;
   height: 80px;
-  background-image: url("../img/logo-www.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-image 0.3s ease-in-out;
+  background-color: rgb(0, 0, 0);
+  border-radius: 40px;
+}
+header .wrapper .logo-img-el {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 5rem;
+  color: rgb(255, 255, 255);
+}
+header .wrapper .logo-img-text {
+  display: none;
+  translate: -50% -50%;
+}
+header .wrapper .logo-img-w1 {
+  translate: -50% -52.5%;
+  color: rgb(255, 255, 128);
+}
+header .wrapper .logo-img-w2 {
+  translate: -55% -42.5%;
+  color: rgb(128, 255, 255);
+}
+header .wrapper .logo-img-w3 {
+  translate: -45% -47.5%;
+  color: rgb(255, 128, 255);
 }
 header .wrapper .nav-main {
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 header .wrapper .nav-main ul {
   display: flex;
@@ -157,7 +177,7 @@ header .wrapper .nav-main ul li a {
   line-height: 100px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 header .wrapper .nav-main ul li a::after {
   content: "";
@@ -252,26 +272,6 @@ header .wrapper .nav-burger .nav-burger-x::after {
 }
 .hero-content-www-picture:hover {
   background-color: rgba(255, 255, 255, 0.15);
-}
-.hero-content-www-picture-text, .hero-content-www-picture-letters {
-  margin: 0;
-  line-height: 1;
-  font-family: "Playfair Display", sans-serif;
-}
-.hero-content-www-picture-text {
-  font-size: 5vw;
-}
-.hero-content-www-picture-letters {
-  font-size: 10vw;
-}
-.hero-content-www-picture-letters-w1 {
-  color: rgb(255, 255, 128);
-}
-.hero-content-www-picture-letters-w2 {
-  color: rgb(128, 255, 255);
-}
-.hero-content-www-picture-letters-w3 {
-  color: rgb(255, 128, 255);
 }
 .hero-content-main {
   display: flex;

@@ -46,7 +46,7 @@ window.addEventListener('scroll', () => {
 const pictureBgc = document.querySelector('.hero-content-www-picture');
 
 logoBtn.addEventListener('mouseenter', () => {
-    pictureBgc.style.backgroundColor = 'rgba(255,255,255,0.15)'
+    pictureBgc.style.backgroundColor = 'rgba(255, 255, 255, 0.5)'
 });
 
 logoBtn.addEventListener('mouseleave', () => {

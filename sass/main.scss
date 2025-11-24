@@ -39,23 +39,48 @@ header {
 
 		.logo {
 			display: flex;
-			margin-top: 20px;
+			margin-top: 10px;
 
 			&-img {
 				animation: heartbeat 3s infinite 10s;
 				width: 80px;
 				height: 80px;
-				background-image: url('../img/logo-www.png');
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-position: center;
-				transition: background-image 0.3s ease-in-out;
+				background-color: colors.$main-black;
+				border-radius: 40px;
+
+				&-el {
+					display: inline-block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					font-size: 5rem;
+					color: colors.$main-white;
+				}
+
+				&-text {
+					display: none;
+					translate: -50% -50%;
+				}
+
+				&-w1 {
+					translate: -50% -52.5%;
+					color: colors.$main-yellow;
+				}
+
+				&-w2 {
+					translate: -55% -42.5%;
+					color: colors.$main-blue;
+				}
+
+				&-w3 {
+					translate: -45% -47.5%;
+					color: colors.$main-purple;
+				}
 			}
 		}
 
 		.nav-main {
 			height: 100%;
-			background-color: colors.$main-black-opacity50;
 
 			ul {
 				display: flex;
@@ -71,7 +96,7 @@ header {
 						line-height: variables.$nav-height;
 						font-family: 'Inter', sans-serif;
 						font-weight: 600;
-						color: colors.$main-white;
+						color: colors.$main-black;
 
 						&::after {
 							content: '';
@@ -186,33 +211,6 @@ header {
 
 				&:hover {
 					background-color: colors.$main-white-opacity-15;
-				}
-
-				&-text,
-				&-letters {
-					margin: 0;
-					line-height: 1;
-					font-family: 'Playfair Display', sans-serif;
-				}
-
-				&-text {
-					font-size: 5vw;
-				}
-
-				&-letters {
-					font-size: 10vw;
-
-					&-w1 {
-						color: colors.$main-yellow;
-					}
-
-					&-w2 {
-						color: colors.$main-blue;
-					}
-
-					&-w3 {
-						color: colors.$main-purple;
-					}
 				}
 			}
 		}
