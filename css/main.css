@@ -111,7 +111,7 @@ p {
   height: 100%;
   margin: 0 auto;
   padding: 0 50px;
-  max-width: 1300px;
+  max-width: 1500px;
 }
 
 header {
@@ -217,6 +217,7 @@ header .wrapper .nav-burger .nav-burger-x::after {
   position: relative;
   height: 100vh;
   min-height: 700px;
+  max-height: 900px;
   background-size: cover;
   background-position: center;
 }
@@ -224,27 +225,28 @@ header .wrapper .nav-burger .nav-burger-x::after {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 .hero-content {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  padding-top: 140px;
+  padding-bottom: 70px;
 }
 .hero-content-www {
-  position: relative;
-  height: 60%;
+  display: flex;
+  padding-right: 20px;
+  width: 50%;
 }
 .hero-content-www-picture {
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  bottom: 10%;
-  right: 5%;
-  height: 60%;
-  width: 60%;
+  min-height: 400px;
+  width: 100%;
   border: 5px solid rgb(0, 0, 0);
   transition: background-color 0.3s ease-in-out;
 }
@@ -274,13 +276,14 @@ header .wrapper .nav-burger .nav-burger-x::after {
 .hero-content-main {
   display: flex;
   flex-direction: column;
-  height: 40%;
+  width: 50%;
 }
 .hero-content-main p {
   font-size: 2.5rem;
 }
 .hero-content-main h1 {
   margin: 10px 0 30px;
+  font-size: 6rem;
 }
 .hero-content-main button {
   padding: 15px 50px;
@@ -297,8 +300,8 @@ header .wrapper .nav-burger .nav-burger-x::after {
 }
 
 .hero-main {
-  background-image: url("../img/modern-office-desk-gray[1]_1500x1000px.jpg");
-  color: rgb(255, 255, 255);
+  background-image: url("../img/white-background.jpg");
+  color: rgb(0, 0, 0);
 }
 
 .offer .wrapper {
@@ -334,7 +337,7 @@ header .wrapper .nav-burger .nav-burger-x::after {
   flex-direction: row-reverse;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1700px) {
   .hero-content-www-picture-text {
     font-size: 80px;
   }
@@ -431,6 +434,9 @@ header .wrapper .nav-burger .nav-burger-x::after {
   .hero {
     min-height: 600px;
   }
+  .hero-content {
+    flex-direction: column;
+  }
   .hero-content-www {
     height: 45%;
   }
@@ -451,8 +457,5 @@ header .wrapper .nav-burger .nav-burger-x::after {
   }
   .hero-content-main button {
     padding: 10px 30px;
-  }
-  .hero-main {
-    background-image: url("../img/modern-office-desk-gray[1]_1000x667px.jpg");
   }
 }/*# sourceMappingURL=main.css.map */

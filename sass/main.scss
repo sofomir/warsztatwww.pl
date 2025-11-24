@@ -21,7 +21,7 @@ p {
 	height: 100%;
 	margin: 0 auto;
 	padding: variables.$border-paddinng-desktop;
-	max-width: 1300px;
+	max-width: 1500px;
 }
 
 //header section
@@ -149,6 +149,7 @@ header {
 	position: relative;
 	height: 100vh;
 	min-height: 700px;
+	max-height: 900px;
 	background-size: cover;
 	background-position: center;
 
@@ -156,29 +157,30 @@ header {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background-color: colors.$main-black-opacity50;
+		// background-color: colors.$main-black-opacity50;
 	}
 
 	&-content {
 		display: flex;
-		justify-content: center;
-		flex-direction: column;
+		flex-direction: row-reverse;
+		align-items: center;
+		gap: 50px;
+		width: 100%;
+		padding-top: 140px;
+		padding-bottom: 70px;
 
 		&-www {
-			position: relative;
-			height: 60%;
+			display: flex;
+			padding-right: 20px;
+			width: 50%;
 
 			&-picture {
-				position: absolute;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				bottom: 10%;
-				right: 5%;
-				height: 60%;
-				width: 60%;
-
+				min-height: 400px;
+				width: 100%;
 				border: 5px solid colors.$main-black;
 				transition: background-color 0.3s ease-in-out;
 
@@ -217,9 +219,8 @@ header {
 
 		&-main {
 			display: flex;
-
 			flex-direction: column;
-			height: 40%;
+			width: 50%;
 
 			p {
 				font-size: 2.5rem;
@@ -227,6 +228,7 @@ header {
 
 			h1 {
 				margin: 10px 0 30px;
+				font-size: 6rem;
 			}
 
 			button {
@@ -249,8 +251,8 @@ header {
 
 //hero section - main hero
 .hero-main {
-	background-image: url('../img/modern-office-desk-gray[1]_1500x1000px.jpg');
-	color: colors.$main-white;
+	background-image: url('../img/white-background.jpg');
+	color: colors.$main-black;
 }
 
 //offer section
@@ -296,8 +298,8 @@ header {
 }
 
 //media queries
-//mobile min-width: 1600px
-@media (min-width: 1600px) {
+//mobile min-width: 1700px
+@media (min-width: 1700px) {
 	.hero-content-www-picture {
 		&-text {
 			font-size: 80px;
@@ -421,6 +423,8 @@ header {
 		min-height: 600px;
 
 		&-content {
+			flex-direction: column;
+
 			&-www {
 				height: 45%;
 
@@ -452,6 +456,6 @@ header {
 	}
 
 	.hero-main {
-		background-image: url('../img/modern-office-desk-gray[1]_1000x667px.jpg');
+		// background-image: url('../img/modern-office-desk-gray[1]_1000x667px.jpg');
 	}
 }
