@@ -135,35 +135,12 @@ p {
 
 	&-content {
 		display: flex;
-		flex-direction: row-reverse;
-		align-items: center;
-		gap: 70px;
+		align-items: flex-end;
 		width: 100%;
 		padding-top: 140px;
-		padding-bottom: 70px;
-
-		&-frame {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 100%;
-			width: 30%;
-
-			&-paint {
-				display: flex;
-				height: 100%;
-				max-height: 600px;
-				width: 100%;
-				max-width: 600px;
-				// background-image: url('../img/vintage-wooden-square-frame.png');
-				background-size: 100% 100%;
-			}
-		}
+		padding-bottom: 100px;
 
 		&-main {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
 			width: 70%;
 
 			p {
@@ -180,7 +157,7 @@ p {
 				padding: 15px 50px;
 				font-size: 2rem;
 				font-family: variables.$font-main-one;
-				font-weight: 700;
+				font-weight: 600;
 				color: colors.$main-black;
 				border: none;
 				background-color: colors.$main-yellow;
@@ -411,31 +388,26 @@ p {
 	}
 
 	//hero section max-width: 800px
-	.hero-content {
-		flex-direction: column;
-		gap: 0;
-		padding-top: 120px;
+	.hero {
+		max-height: 800px;
 
-		&-frame {
-			padding: 0 20px;
-			height: 30%;
-			width: 100%;
-		}
+		&-content {
+			padding-top: 100px;
+			padding-bottom: 60px;
 
-		&-main {
-			align-items: center;
-			height: 70%;
-			width: 100%;
+			&-main {
+				width: 100%;
 
-			p {
-				font-size: 1.8rem;
-				text-align: center;
-			}
+				p {
+					font-size: 2rem;
+					text-align: center;
+				}
 
-			h1 {
-				margin-bottom: 20px;
-				font-size: 4rem;
-				text-align: center;
+				h1 {
+					font-size: 4rem;
+					text-align: center;
+					letter-spacing: 0;
+				}
 			}
 		}
 	}
