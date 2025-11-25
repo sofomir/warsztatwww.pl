@@ -102,6 +102,7 @@ h6 {
   font-family: "Playfair Display", serif;
 }
 
+button,
 p {
   font-family: "Inter", sans-serif;
 }
@@ -114,91 +115,85 @@ p {
   max-width: 1500px;
 }
 
-header {
+.header {
   position: absolute;
-  top: 0;
-  width: 100%;
   height: 100px;
+  width: 100%;
   z-index: 1;
 }
-header .wrapper {
+.header .wrapper {
   display: flex;
   justify-content: space-between;
-  align-content: center;
 }
-header .wrapper .logo {
+.header .wrapper .logo {
   display: flex;
   margin-top: 20px;
 }
-header .wrapper .logo-img {
-  animation: heartbeat 3s infinite 10s;
+.header .wrapper .logo-img {
   width: 100px;
   height: 100px;
   background-color: rgb(0, 0, 0);
   border-radius: 10px;
+  animation: heartbeat 3s infinite 10s;
 }
-header .wrapper .logo-img-el {
-  display: inline-block;
+.header .wrapper .logo-img-el {
   position: absolute;
   top: 50%;
   left: 50%;
   font-size: 7rem;
-  color: rgb(255, 255, 255);
 }
-header .wrapper .logo-img-text {
-  display: none;
-  translate: -50% -50%;
-}
-header .wrapper .logo-img-w1 {
+.header .wrapper .logo-img-w1 {
   translate: -50% -52.5%;
   color: rgb(255, 255, 128);
 }
-header .wrapper .logo-img-w2 {
+.header .wrapper .logo-img-w2 {
   translate: -55% -42.5%;
   color: rgb(128, 255, 255);
 }
-header .wrapper .logo-img-w3 {
+.header .wrapper .logo-img-w3 {
   translate: -45% -47.5%;
   color: rgb(255, 128, 255);
 }
-header .wrapper .nav-main {
-  height: 100%;
+.header .wrapper .nav-main {
+  display: flex;
+  align-items: center;
 }
-header .wrapper .nav-main ul {
+.header .wrapper .nav-main ul {
   display: flex;
   justify-content: center;
-  padding: 0 20px;
-  height: 100%;
 }
-header .wrapper .nav-main ul li a {
-  display: inline-block;
+.header .wrapper .nav-main ul li {
+  padding-left: 30px;
+}
+.header .wrapper .nav-main ul li a {
   position: relative;
-  padding: 0 40px;
+  padding: 20px;
   font-size: 2rem;
-  line-height: 100px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   color: rgb(0, 0, 0);
 }
-header .wrapper .nav-main ul li a::after {
+.header .wrapper .nav-main ul li a::after {
   content: "";
   position: absolute;
-  bottom: 30px;
-  left: 20%;
+  bottom: 10px;
+  left: 10%;
   width: 0;
   border-bottom: 5px solid rgb(255, 255, 128);
   transition: width 0.3s ease-in-out;
 }
-header .wrapper .nav-main ul li a:hover::after {
-  width: 60%;
+.header .wrapper .nav-main ul li a:hover::after {
+  width: 80%;
 }
-header .wrapper .nav-burger {
+.header .wrapper .nav-burger {
   display: none;
 }
 
 .hero {
   position: relative;
   height: 100vh;
+  min-height: 600px;
+  max-height: 1000px;
 }
 .hero-bg {
   position: absolute;
@@ -206,6 +201,9 @@ header .wrapper .nav-burger {
   height: 100%;
   background-size: cover;
   background-position: center;
+}
+.hero-main-bg {
+  background-image: url("../img/white-lightblue-background-cloud.jpg");
 }
 .hero-content {
   display: flex;
@@ -221,7 +219,7 @@ header .wrapper .nav-burger {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 50%;
+  width: 30%;
 }
 .hero-content-frame-paint {
   display: flex;
@@ -229,14 +227,13 @@ header .wrapper .nav-burger {
   max-height: 600px;
   width: 100%;
   max-width: 600px;
-  background-image: url("../img/vintage-wooden-square-frame.png");
   background-size: 100% 100%;
 }
 .hero-content-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 70%;
 }
 .hero-content-main p {
   font-size: 2.5rem;
@@ -254,15 +251,10 @@ header .wrapper .nav-burger {
   color: rgb(0, 0, 0);
   border: none;
   background-color: rgb(255, 255, 128);
-  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 .hero-content-main button:hover {
-  box-shadow: 5px 5px rgb(0, 0, 0);
-}
-
-.hero-main-bg {
-  background-image: url("../img/white-lightblue-background-cloud.jpg");
-  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 192);
 }
 
 .belt {
@@ -321,95 +313,78 @@ header .wrapper .nav-burger {
   flex-direction: row-reverse;
 }
 
-@media (max-width: 1200px) {
-  .hero {
-    height: 800px;
-  }
-  .hero h1 {
-    font-size: 5rem;
-  }
-}
 @media (max-width: 800px) {
   .wrapper {
     padding: 0 20px;
   }
-  header {
+  .header {
     position: fixed;
-    height: 90px;
+    top: 0;
     transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
-  header .wrapper {
+  .header .wrapper {
     padding: 0;
   }
-  header .wrapper .logo {
+  .header .wrapper .logo {
     position: fixed;
-    padding-left: 20px;
-    margin-top: 15px;
+    margin-left: 20px;
     z-index: 1;
   }
-  header .wrapper .logo-img {
+  .header .wrapper .logo .logo-img {
     width: 60px;
     height: 60px;
   }
-  header .wrapper .logo-img-el {
+  .header .wrapper .logo .logo-img-el {
     font-size: 5rem;
   }
-  header .wrapper .nav-main {
+  .header .wrapper .nav-main {
     position: fixed;
+    justify-content: flex-end;
     width: 100%;
-    height: auto;
-    padding: 90px 30px 30px;
-    background-color: rgb(255, 255, 192);
+    padding-top: 100px;
+    background-color: rgba(255, 255, 255, 0.85);
     opacity: 0;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
-  header .wrapper .nav-main ul {
+  .header .wrapper .nav-main ul {
     flex-direction: column;
-    padding: 0;
+    margin-bottom: 30px;
   }
-  header .wrapper .nav-main ul li {
+  .header .wrapper .nav-main ul li {
     margin-top: 30px;
     text-align: right;
   }
-  header .wrapper .nav-main ul li a {
-    padding: 0;
-    line-height: normal;
-    color: rgb(0, 0, 0);
+  .header .wrapper .nav-main ul li a {
+    padding: 20px 25px;
   }
-  header .wrapper .nav-main ul li a::after {
-    bottom: -10px;
-    left: -10%;
-    width: 0;
+  .header .wrapper .nav-main ul li a::after {
+    border-bottom: 5px solid rgb(128, 255, 255);
   }
-  header .wrapper .nav-main ul li a:hover::after {
-    width: 120%;
-  }
-  header .wrapper .nav-main::before {
+  .header .wrapper .nav-main::before {
     content: "";
     position: absolute;
-    top: 90px;
+    top: 100px;
     left: 2.5%;
     width: 95%;
-    border-bottom: 3px solid rgb(128, 255, 255);
+    border-bottom: 3px solid rgb(255, 128, 255);
   }
-  header .wrapper .nav-main-show {
+  .header .wrapper .nav-main-show {
     opacity: 1;
     transform: translateY(0%);
   }
-  header .wrapper .nav-burger {
+  .header .wrapper .nav-burger {
     position: fixed;
     display: flex;
     align-items: center;
-    justify-content: center;
     padding: 5px;
-    top: 22.5px;
-    right: 20px;
+    top: 27.5px;
+    right: 15px;
     height: 45px;
     cursor: pointer;
     transition: top 0.3s ease-in-out;
   }
-  header .wrapper .nav-burger-line, header .wrapper .nav-burger-line::before, header .wrapper .nav-burger-line::after {
+  .header .wrapper .nav-burger-line, .header .wrapper .nav-burger-line::before, .header .wrapper .nav-burger-line::after {
     content: "";
     display: block;
     position: absolute;
@@ -419,38 +394,34 @@ header .wrapper .nav-burger {
     transition: transform 0.5s, top 0.3s, background 0.3s;
     transform-origin: center;
   }
-  header .wrapper .nav-burger-line {
+  .header .wrapper .nav-burger-line {
     position: relative;
   }
-  header .wrapper .nav-burger-line::before {
+  .header .wrapper .nav-burger-line::before {
     top: -15px;
   }
-  header .wrapper .nav-burger-line::after {
+  .header .wrapper .nav-burger-line::after {
     top: 15px;
   }
-  header .wrapper .nav-burger .nav-burger-x {
+  .header .wrapper .nav-burger .nav-burger-x {
     background: transparent;
   }
-  header .wrapper .nav-burger .nav-burger-x::before {
+  .header .wrapper .nav-burger .nav-burger-x::before {
     top: 0;
     transform: rotate(45deg);
   }
-  header .wrapper .nav-burger .nav-burger-x::after {
+  .header .wrapper .nav-burger .nav-burger-x::after {
     top: 0;
     transform: rotate(-45deg);
   }
   .header-hide {
     top: -100px;
-    opacity: 1;
   }
   .header-hide .wrapper .nav-burger {
     top: -40px;
   }
   .header-bgc {
     background-color: rgba(255, 255, 255, 0.85);
-  }
-  .hero {
-    height: 700px;
   }
   .hero-content {
     flex-direction: column;
@@ -459,12 +430,12 @@ header .wrapper .nav-burger {
   }
   .hero-content-frame {
     padding: 0 20px;
-    height: 40%;
+    height: 30%;
     width: 100%;
   }
   .hero-content-main {
     align-items: center;
-    height: 60%;
+    height: 70%;
     width: 100%;
   }
   .hero-content-main p {
