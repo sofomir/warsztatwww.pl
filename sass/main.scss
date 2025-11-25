@@ -39,21 +39,21 @@ header {
 
 		.logo {
 			display: flex;
-			margin-top: 10px;
+			margin-top: 20px;
 
 			&-img {
 				animation: heartbeat 3s infinite 10s;
-				width: 80px;
-				height: 80px;
+				width: 100px;
+				height: 100px;
 				background-color: colors.$main-black;
-				border-radius: 40px;
+				border-radius: 10px;
 
 				&-el {
 					display: inline-block;
 					position: absolute;
 					top: 50%;
 					left: 50%;
-					font-size: 5rem;
+					font-size: 7rem;
 					color: colors.$main-white;
 				}
 
@@ -91,8 +91,8 @@ header {
 					a {
 						display: inline-block;
 						position: relative;
-						padding: 0 30px;
-						font-size: 1.8rem;
+						padding: 0 40px;
+						font-size: 2rem;
 						line-height: variables.$nav-height;
 						font-family: 'Inter', sans-serif;
 						font-weight: 600;
@@ -104,7 +104,7 @@ header {
 							bottom: 30px;
 							left: 20%;
 							width: 0;
-							border-bottom: 3px solid colors.$main-yellow;
+							border-bottom: 5px solid colors.$main-yellow;
 							transition: width 0.3s ease-in-out;
 						}
 
@@ -188,24 +188,21 @@ header {
 		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
-		gap: 50px;
+		gap: 70px;
 		width: 100%;
 		padding-top: 140px;
 		padding-bottom: 70px;
 
-		&-www {
-			display: flex;
-			padding-right: 20px;
+		&-frame {
+			height: 100%;
 			width: 50%;
 
-			&-picture {
+			&-paint {
 				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				min-height: 400px;
+				height: 100%;
 				width: 100%;
-				border: 5px solid colors.$main-black;
+				background-image: url('../img/vintage-wooden-square-frame.png');
+				background-size: 100% 100%;
 			}
 		}
 
@@ -221,20 +218,22 @@ header {
 			h1 {
 				margin: 10px 0 30px;
 				font-size: 6rem;
+				letter-spacing: 3px;
 			}
 
 			button {
 				padding: 15px 50px;
-				border: 3px solid colors.$main-yellow;
-				font-size: 1.8rem;
+				font-size: 2rem;
 				font-family: 'Inter', sans-serif;
 				font-weight: 700;
 				color: colors.$main-black;
+				border: none;
 				background-color: colors.$main-yellow;
-				transition: background-color 0.3s ease-in-out;
+				transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
 				&:hover {
-					background-color: colors.$main-yellow-light;
+					// background-color: colors.$main-yellow-light;
+					box-shadow: 5px 5px colors.$main-black;
 				}
 			}
 		}
@@ -243,8 +242,37 @@ header {
 
 //hero section - main hero
 .hero-main {
-	background-image: url('../img/white-background.jpg');
+	background-image: url('../img/white-lightblue-background-cloud.jpg');
 	color: colors.$main-black;
+}
+
+//belt section
+.belt {
+	
+	background-color: colors.$main-black;
+	color: colors.$main-white;
+
+	&-track {
+		display: flex;
+		justify-content: space-around;
+		padding: 10px 0;
+
+		&-item {
+			font-family: 'Playfair Display', serif;
+
+			.w1 {
+				color: colors.$main-yellow;
+			}
+
+			.w2 {
+				color: colors.$main-blue;
+			}
+
+			.w3 {
+				color: colors.$main-purple;
+			}
+		}
+	}
 }
 
 //offer section
@@ -400,10 +428,10 @@ header {
 		&-content {
 			flex-direction: column;
 
-			&-www {
+			&-frame {
 				height: 45%;
 
-				&-picture {
+				&-paint {
 					width: 80%;
 
 					&-text {
@@ -428,9 +456,5 @@ header {
 				}
 			}
 		}
-	}
-
-	.hero-main {
-		// background-image: url('../img/modern-office-desk-gray[1]_1000x667px.jpg');
 	}
 }

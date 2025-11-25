@@ -128,21 +128,21 @@ header .wrapper {
 }
 header .wrapper .logo {
   display: flex;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 header .wrapper .logo-img {
   animation: heartbeat 3s infinite 10s;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background-color: rgb(0, 0, 0);
-  border-radius: 40px;
+  border-radius: 10px;
 }
 header .wrapper .logo-img-el {
   display: inline-block;
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 5rem;
+  font-size: 7rem;
   color: rgb(255, 255, 255);
 }
 header .wrapper .logo-img-text {
@@ -172,8 +172,8 @@ header .wrapper .nav-main ul {
 header .wrapper .nav-main ul li a {
   display: inline-block;
   position: relative;
-  padding: 0 30px;
-  font-size: 1.8rem;
+  padding: 0 40px;
+  font-size: 2rem;
   line-height: 100px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
@@ -185,7 +185,7 @@ header .wrapper .nav-main ul li a::after {
   bottom: 30px;
   left: 20%;
   width: 0;
-  border-bottom: 3px solid rgb(255, 255, 128);
+  border-bottom: 5px solid rgb(255, 255, 128);
   transition: width 0.3s ease-in-out;
 }
 header .wrapper .nav-main ul li a:hover::after {
@@ -250,24 +250,21 @@ header .wrapper .nav-burger .nav-burger-x::after {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: 50px;
+  gap: 70px;
   width: 100%;
   padding-top: 140px;
   padding-bottom: 70px;
 }
-.hero-content-www {
-  display: flex;
-  padding-right: 20px;
+.hero-content-frame {
+  height: 100%;
   width: 50%;
 }
-.hero-content-www-picture {
+.hero-content-frame-paint {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 400px;
+  height: 100%;
   width: 100%;
-  border: 5px solid rgb(0, 0, 0);
+  background-image: url("../img/vintage-wooden-square-frame.png");
+  background-size: 100% 100%;
 }
 .hero-content-main {
   display: flex;
@@ -280,24 +277,47 @@ header .wrapper .nav-burger .nav-burger-x::after {
 .hero-content-main h1 {
   margin: 10px 0 30px;
   font-size: 6rem;
+  letter-spacing: 3px;
 }
 .hero-content-main button {
   padding: 15px 50px;
-  border: 3px solid rgb(255, 255, 128);
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-family: "Inter", sans-serif;
   font-weight: 700;
   color: rgb(0, 0, 0);
+  border: none;
   background-color: rgb(255, 255, 128);
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .hero-content-main button:hover {
-  background-color: rgb(255, 255, 192);
+  box-shadow: 5px 5px rgb(0, 0, 0);
 }
 
 .hero-main {
-  background-image: url("../img/white-background.jpg");
+  background-image: url("../img/white-lightblue-background-cloud.jpg");
   color: rgb(0, 0, 0);
+}
+
+.belt {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.belt-track {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+.belt-track-item {
+  font-family: "Playfair Display", serif;
+}
+.belt-track-item .w1 {
+  color: rgb(255, 255, 128);
+}
+.belt-track-item .w2 {
+  color: rgb(128, 255, 255);
+}
+.belt-track-item .w3 {
+  color: rgb(255, 128, 255);
 }
 
 .offer .wrapper {
@@ -422,16 +442,16 @@ header .wrapper .nav-burger .nav-burger-x::after {
   .hero-content {
     flex-direction: column;
   }
-  .hero-content-www {
+  .hero-content-frame {
     height: 45%;
   }
-  .hero-content-www-picture {
+  .hero-content-frame-paint {
     width: 80%;
   }
-  .hero-content-www-picture-text {
+  .hero-content-frame-paint-text {
     font-size: 7vw;
   }
-  .hero-content-www-picture-leters {
+  .hero-content-frame-paint-leters {
     font-size: 14vw;
   }
   .hero-content-main {
