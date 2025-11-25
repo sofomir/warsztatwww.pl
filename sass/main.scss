@@ -84,6 +84,7 @@ header {
 
 			ul {
 				display: flex;
+				justify-content: center;
 				padding: 0 20px;
 				height: 100%;
 
@@ -117,54 +118,7 @@ header {
 		}
 
 		.nav-burger {
-			position: fixed;
 			display: none;
-			align-items: center;
-			justify-content: center;
-			padding: 5px;
-			top: 40px;
-			right: 50px;
-			height: 45px;
-			cursor: pointer;
-
-			&-line,
-			&-line::before,
-			&-line::after {
-				content: '';
-				display: block;
-				position: absolute;
-				width: 45px;
-				height: 4px;
-				background: colors.$main-black;
-				transition: transform 0.5s, top 0.3s, background 0.3s;
-				transform-origin: center;
-			}
-
-			&-line {
-				position: relative;
-
-				&::before {
-					top: -15px;
-				}
-
-				&::after {
-					top: 15px;
-				}
-			}
-
-			.nav-burger-x {
-				background: transparent;
-
-				&::before {
-					top: 0;
-					transform: rotate(45deg);
-				}
-
-				&::after {
-					top: 0;
-					transform: rotate(-45deg);
-				}
-			}
 		}
 	}
 }
@@ -344,7 +298,7 @@ header {
 	//header section max-width: 800px
 	header {
 		position: fixed;
-		height: 80px;
+		height: 90px;
 		transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
 		.wrapper {
@@ -370,11 +324,11 @@ header {
 				position: fixed;
 				width: 100%;
 				height: auto;
-				padding: 100px 30px 40px;
-				background-color: colors.$main-white-opacity-85;
+				padding: 90px 30px 30px;
+				background-color: colors.$main-yellow-light;
 				opacity: 0;
 				transform: translateY(-100%);
-				transition: transform 0.3s ease-in-out, opacity 0.1s ease-in-out;
+				transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
 				ul {
 					flex-direction: column;
@@ -382,7 +336,6 @@ header {
 
 					li {
 						margin-top: 30px;
-						justify-content: flex-end;
 						text-align: right;
 
 						a {
@@ -419,10 +372,55 @@ header {
 			}
 
 			.nav-burger {
+				position: fixed;
 				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 5px;
 				top: 22.5px;
 				right: 20px;
+				height: 45px;
+				cursor: pointer;
 				transition: top 0.3s ease-in-out;
+
+				&-line,
+				&-line::before,
+				&-line::after {
+					content: '';
+					display: block;
+					position: absolute;
+					width: 45px;
+					height: 4px;
+					background: colors.$main-black;
+					transition: transform 0.5s, top 0.3s, background 0.3s;
+					transform-origin: center;
+				}
+
+				&-line {
+					position: relative;
+
+					&::before {
+						top: -15px;
+					}
+
+					&::after {
+						top: 15px;
+					}
+				}
+
+				.nav-burger-x {
+					background: transparent;
+
+					&::before {
+						top: 0;
+						transform: rotate(45deg);
+					}
+
+					&::after {
+						top: 0;
+						transform: rotate(-45deg);
+					}
+				}
 			}
 		}
 	}
@@ -439,7 +437,7 @@ header {
 	}
 
 	.header-bgc {
-		background-color: colors.$main-black-opacity85;
+		background-color: colors.$main-white-opacity-85;
 	}
 
 	//hero section max-width: 800px
@@ -455,8 +453,6 @@ header {
 				padding: 0 20px;
 				height: 40%;
 				width: 100%;
-				&-paint {
-				}
 			}
 
 			&-main {
