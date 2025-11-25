@@ -50,7 +50,7 @@ ul {
   list-style-type: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   h1 {
     font-size: 4rem;
   }
@@ -208,7 +208,7 @@ header .wrapper .nav-burger-line, header .wrapper .nav-burger-line::before, head
   position: absolute;
   width: 45px;
   height: 4px;
-  background: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
   transition: transform 0.5s, top 0.3s, background 0.3s;
   transform-origin: center;
 }
@@ -236,15 +236,13 @@ header .wrapper .nav-burger .nav-burger-x::after {
 .hero {
   position: relative;
   height: 100vh;
-  min-height: 700px;
-  max-height: 900px;
-  background-size: cover;
-  background-position: center;
 }
 .hero-bg {
   position: absolute;
   width: 100%;
   height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 .hero-content {
   display: flex;
@@ -256,19 +254,25 @@ header .wrapper .nav-burger .nav-burger-x::after {
   padding-bottom: 70px;
 }
 .hero-content-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 50%;
 }
 .hero-content-frame-paint {
   display: flex;
   height: 100%;
+  max-height: 600px;
   width: 100%;
+  max-width: 600px;
   background-image: url("../img/vintage-wooden-square-frame.png");
   background-size: 100% 100%;
 }
 .hero-content-main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 50%;
 }
 .hero-content-main p {
@@ -293,19 +297,20 @@ header .wrapper .nav-burger .nav-burger-x::after {
   box-shadow: 5px 5px rgb(0, 0, 0);
 }
 
-.hero-main {
+.hero-main-bg {
   background-image: url("../img/white-lightblue-background-cloud.jpg");
   color: rgb(0, 0, 0);
 }
 
 .belt {
+  padding: 10px 0;
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
+  overflow: hidden;
 }
 .belt-track {
   display: flex;
   justify-content: space-around;
-  padding: 10px 0;
 }
 .belt-track-item {
   font-family: "Playfair Display", serif;
@@ -353,7 +358,15 @@ header .wrapper .nav-burger .nav-burger-x::after {
   flex-direction: row-reverse;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
+  .hero {
+    height: 800px;
+  }
+  .hero h1 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 800px) {
   .wrapper {
     padding: 0 20px;
   }
@@ -368,20 +381,22 @@ header .wrapper .nav-burger .nav-burger-x::after {
   header .wrapper .logo {
     position: fixed;
     padding-left: 20px;
-    margin-top: 10px;
-    height: 60px;
+    margin-top: 15px;
     z-index: 1;
   }
   header .wrapper .logo-img {
     width: 60px;
     height: 60px;
   }
+  header .wrapper .logo-img-el {
+    font-size: 5rem;
+  }
   header .wrapper .nav-main {
     position: fixed;
     width: 100%;
     height: auto;
-    padding: 80px 30px 40px;
-    background-color: rgba(0, 0, 0, 0.85);
+    padding: 100px 30px 40px;
+    background-color: rgba(255, 255, 255, 0.85);
     opacity: 0;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out, opacity 0.1s ease-in-out;
@@ -398,7 +413,7 @@ header .wrapper .nav-burger .nav-burger-x::after {
   header .wrapper .nav-main ul li a {
     padding: 0;
     line-height: normal;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
   }
   header .wrapper .nav-main ul li a::after {
     bottom: -10px;
@@ -411,7 +426,7 @@ header .wrapper .nav-burger .nav-burger-x::after {
   header .wrapper .nav-main::before {
     content: "";
     position: absolute;
-    top: 80px;
+    top: 90px;
     left: 2.5%;
     width: 95%;
     border-bottom: 3px solid rgb(128, 255, 255);
@@ -422,7 +437,7 @@ header .wrapper .nav-burger .nav-burger-x::after {
   }
   header .wrapper .nav-burger {
     display: flex;
-    top: 17.5px;
+    top: 22.5px;
     right: 20px;
     transition: top 0.3s ease-in-out;
   }
@@ -437,30 +452,33 @@ header .wrapper .nav-burger .nav-burger-x::after {
     background-color: rgba(0, 0, 0, 0.85);
   }
   .hero {
-    min-height: 600px;
+    height: 700px;
   }
   .hero-content {
     flex-direction: column;
+    gap: 0;
+    padding-top: 120px;
   }
   .hero-content-frame {
-    height: 45%;
-  }
-  .hero-content-frame-paint {
-    width: 80%;
-  }
-  .hero-content-frame-paint-text {
-    font-size: 7vw;
-  }
-  .hero-content-frame-paint-leters {
-    font-size: 14vw;
+    padding: 0 20px;
+    height: 40%;
+    width: 100%;
   }
   .hero-content-main {
-    height: 55%;
+    align-items: center;
+    height: 60%;
+    width: 100%;
   }
   .hero-content-main p {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
   }
-  .hero-content-main button {
-    padding: 10px 30px;
+  .hero-content-main h1 {
+    margin-bottom: 20px;
+    font-size: 4rem;
+    text-align: center;
+  }
+  .belt-track-item {
+    padding: 0 3rem;
   }
 }/*# sourceMappingURL=main.css.map */
