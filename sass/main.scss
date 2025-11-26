@@ -248,46 +248,52 @@ p {
 
 //footer section
 .footer {
+	position: relative;
 	background-color: colors.$main-blue-light;
-	color: colors.$main-white;
+	color: colors.$main-black;
 
-	.logo-img {
-		width: 100px;
-		height: 100px;
-		background-color: colors.$main-black;
-		border-radius: 10px;
-		animation: heartbeat 3s infinite 10s;
+	.logo {
+		position: absolute;
+		bottom: 30px;
 
-		&-el {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			font-size: 7rem;
-		}
+		.logo-img {
+			width: 100px;
+			height: 100px;
+			background-color: colors.$main-black;
+			border-radius: 10px;
+			animation: heartbeat 3s infinite 10s;
 
-		&-w1 {
-			translate: -50% -52.5%;
-			color: colors.$main-yellow;
-		}
+			&-el {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				font-size: 7rem;
+			}
 
-		&-w2 {
-			translate: -55% -42.5%;
-			color: colors.$main-blue;
-		}
+			&-w1 {
+				translate: -50% -52.5%;
+				color: colors.$main-yellow;
+			}
 
-		&-w3 {
-			translate: -45% -47.5%;
-			color: colors.$main-purple;
+			&-w2 {
+				translate: -55% -42.5%;
+				color: colors.$main-blue;
+			}
+
+			&-w3 {
+				translate: -45% -47.5%;
+				color: colors.$main-purple;
+			}
 		}
 	}
-}
 
-.author-name {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 20px;
-	font-family: variables.$font-main-two;
+	.author-name {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 60px;
+		font-family: variables.$font-main-two;
+	}
 }
 
 //media queries
@@ -464,5 +470,9 @@ p {
 
 	.belt-track-item {
 		padding: 0 3rem;
+	}
+
+	.footer .author-name {
+		justify-content: flex-end;
 	}
 }
