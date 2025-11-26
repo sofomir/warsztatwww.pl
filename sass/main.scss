@@ -246,6 +246,50 @@ p {
 	}
 }
 
+//footer section
+.footer {
+	background-color: colors.$main-blue-light;
+	color: colors.$main-white;
+
+	.logo-img {
+		width: 100px;
+		height: 100px;
+		background-color: colors.$main-black;
+		border-radius: 10px;
+		animation: heartbeat 3s infinite 10s;
+
+		&-el {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			font-size: 7rem;
+		}
+
+		&-w1 {
+			translate: -50% -52.5%;
+			color: colors.$main-yellow;
+		}
+
+		&-w2 {
+			translate: -55% -42.5%;
+			color: colors.$main-blue;
+		}
+
+		&-w3 {
+			translate: -45% -47.5%;
+			color: colors.$main-purple;
+		}
+	}
+}
+
+.author-name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	font-family: variables.$font-main-two;
+}
+
 //media queries
 //min-width: 1100px
 @media (min-width: 1500px) {

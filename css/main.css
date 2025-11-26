@@ -38,6 +38,7 @@ p {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -295,6 +296,44 @@ p {
 }
 .offer-box:nth-child(2n) {
   flex-direction: row-reverse;
+}
+
+.footer {
+  background-color: rgb(192, 255, 255);
+  color: rgb(255, 255, 255);
+}
+.footer .logo-img {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  animation: heartbeat 3s infinite 10s;
+}
+.footer .logo-img-el {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 7rem;
+}
+.footer .logo-img-w1 {
+  translate: -50% -52.5%;
+  color: rgb(255, 255, 128);
+}
+.footer .logo-img-w2 {
+  translate: -55% -42.5%;
+  color: rgb(128, 255, 255);
+}
+.footer .logo-img-w3 {
+  translate: -45% -47.5%;
+  color: rgb(255, 128, 255);
+}
+
+.author-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: "Playfair Display", serif;
 }
 
 @media (max-width: 700px) {
