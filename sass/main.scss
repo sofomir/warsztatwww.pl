@@ -19,9 +19,9 @@ p {
 
 .wrapper {
 	position: relative;
-	height: 100%;
 	margin: 0 auto;
 	padding: 0 50px;
+	width: 100%;
 	max-width: 1500px;
 }
 
@@ -275,7 +275,7 @@ p {
 
 	.logo {
 		position: absolute;
-		bottom: 30px;
+		bottom: 20px;
 		z-index: 1;
 
 		.logo-img {
@@ -486,7 +486,7 @@ p {
 		padding: 0 3rem;
 	}
 
-	.footer .author-name {
+	.footer .author {
 		justify-content: flex-end;
 	}
 }
