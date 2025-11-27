@@ -108,6 +108,10 @@ p {
   font-family: "Inter", sans-serif;
 }
 
+section {
+  scroll-margin-top: 50px;
+}
+
 .wrapper {
   position: relative;
   margin: 0 auto;
@@ -204,13 +208,14 @@ p {
   background-position: center;
 }
 .hero-main-bg {
-  background-image: url("../img/white-lightblue-background-cloud.jpg");
+  background-image: url("../img/blue-paints-white-paper_2000-1706px.jpg");
 }
 .hero-content {
   display: flex;
   align-items: flex-end;
   padding-top: 50px;
   padding-bottom: 50px;
+  height: 100%;
   width: 100%;
 }
 .hero-content-main {
@@ -352,7 +357,7 @@ p {
   color: rgb(255, 128, 255);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .wrapper {
     padding: 0 20px;
   }
@@ -464,6 +469,9 @@ p {
   }
   .hero {
     max-height: 800px;
+  }
+  .hero-main-bg {
+    background-image: url("../img/blue-paints-white-paper_1000-853px.jpg");
   }
   .hero-content {
     padding-top: 50px;
