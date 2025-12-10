@@ -17,6 +17,20 @@ p {
 	font-family: variables.$font-main-one;
 }
 
+button {
+	padding: 15px 50px;
+	font-size: 2rem;
+	font-weight: 600;
+	color: colors.$main-black;
+	border: none;
+	background-color: colors.$main-yellow;
+	transition: background-color 0.3s ease-in-out;
+
+	&:hover {
+		background-color: colors.$main-yellow-light;
+	}
+}
+
 section {
 	scroll-margin-top: 50px;
 }
@@ -160,21 +174,6 @@ section {
 				margin: 10px 0 30px;
 				font-size: 6rem;
 				letter-spacing: 3px;
-			}
-
-			button {
-				padding: 15px 50px;
-				font-size: 2rem;
-				font-family: variables.$font-main-one;
-				font-weight: 600;
-				color: colors.$main-black;
-				border: none;
-				background-color: colors.$main-yellow;
-				transition: background-color 0.3s ease-in-out;
-
-				&:hover {
-					background-color: colors.$main-yellow-light;
-				}
 			}
 		}
 	}
@@ -320,7 +319,7 @@ section {
 @media (min-width: 1536px) {
 }
 
-//max-width: 700px
+//max-width: 768px
 @media (max-width: 768px) {
 	.wrapper {
 		padding: 0 20px;
