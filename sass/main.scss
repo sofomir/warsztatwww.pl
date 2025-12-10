@@ -3,6 +3,14 @@
 @use './variables';
 @use './animations';
 
+body {
+	overflow-x: hidden;
+}
+
+body::selection {
+	background-color: colors.$main-yellow-light;
+}
+
 h1,
 h2,
 h3,
@@ -180,17 +188,44 @@ section {
 }
 
 //belt section
+.belt-cover {
+	&-bgc {
+		position: absolute;
+		width: 100%;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 250px;
+			height: 60px;
+			background-color: colors.$main-black;
+			z-index: 2;
+		}
+
+		&::before {
+			left: -250px;
+		}
+
+		&::after {
+			right: -250px;
+		}
+	}
+}
+
 .belt {
-	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	height: 60px;
 	background-color: colors.$main-black;
 	color: colors.$main-white;
-	overflow: hidden;
 
 	&-track {
 		display: flex;
-		justify-content: space-around;
+		animation: banner 3s linear infinite;
 
 		&-item {
+			min-width: 200px;
 			font-family: variables.$font-main-two;
 
 			.w1 {
