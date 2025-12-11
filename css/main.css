@@ -10,27 +10,27 @@ html {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 h4 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 h5 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
 }
 
 h6 {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 p {
@@ -51,24 +51,24 @@ ul {
   list-style-type: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   h1 {
     font-size: 4rem;
   }
   h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   h4 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   h5 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   h6 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   p {
     font-size: 1.6rem;
@@ -94,7 +94,7 @@ ul {
     transform: scale(1);
   }
 }
-@keyframes banner {
+@keyframes belt {
   from {
     transform: translateX(0px);
   }
@@ -151,6 +151,21 @@ section {
   padding: 0 50px;
   width: 100%;
   max-width: 1500px;
+}
+
+.title {
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  border-bottom: 5px solid rgb(255, 128, 255);
 }
 
 .header {
@@ -263,7 +278,6 @@ section {
 }
 .hero-content-main h1 {
   margin: 10px 0 30px;
-  font-size: 6rem;
   letter-spacing: 3px;
 }
 
@@ -283,7 +297,7 @@ section {
 }
 .belt-track {
   display: flex;
-  animation: banner 5s infinite linear;
+  animation: belt 5s infinite linear;
 }
 .belt-track-item {
   display: flex;
@@ -418,6 +432,9 @@ section {
 @media (max-width: 768px) {
   .wrapper {
     padding: 0 20px;
+  }
+  .title::after {
+    width: 200px;
   }
   .header {
     position: fixed;
