@@ -188,44 +188,22 @@ section {
 }
 
 //belt section
-.belt-cover {
-	&-bgc {
-		position: absolute;
-		width: 100%;
-
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			width: 250px;
-			height: 60px;
-			background-color: colors.$main-black;
-			z-index: 2;
-		}
-
-		&::before {
-			left: -250px;
-		}
-
-		&::after {
-			right: -250px;
-		}
-	}
-}
-
 .belt {
-	display: flex;
-	align-items: center;
-	height: 60px;
+	height: 80px;
 	background-color: colors.$main-black;
 	color: colors.$main-white;
+	overflow-y: hidden;
 
 	&-track {
 		display: flex;
-		animation: banner 3s linear infinite;
+		flex-wrap: wrap;
+		justify-content: space-between;
 
 		&-item {
-			min-width: 200px;
+			display: flex;
+			align-items: center;
+			height: 80px;
+			padding: 0 25px;
 			font-family: variables.$font-main-two;
 
 			.w1 {
@@ -523,10 +501,6 @@ section {
 				}
 			}
 		}
-	}
-
-	.belt-track-item {
-		padding: 0 3rem;
 	}
 
 	.footer .author {
