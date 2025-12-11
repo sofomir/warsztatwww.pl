@@ -188,22 +188,30 @@ section {
 }
 
 //belt section
+.belt-cover {
+	display: none;
+}
+
 .belt {
 	height: 80px;
 	background-color: colors.$main-black;
 	color: colors.$main-white;
-	overflow-y: hidden;
+	overflow-x: hidden;
+
+	.wrapper {
+		max-width: 1600px;
+		padding: 0;
+	}
 
 	&-track {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		animation: banner 5s infinite linear;
 
 		&-item {
 			display: flex;
 			align-items: center;
+			min-width: 200px;
 			height: 80px;
-			padding: 0 25px;
 			font-family: variables.$font-main-two;
 
 			.w1 {
@@ -330,6 +338,35 @@ section {
 //media queries
 //min-width: 1536px
 @media (min-width: 1536px) {
+	.belt-cover {
+		position: relative;
+		display: block;
+		max-width: 1600px;
+
+		&-bgc {
+			position: absolute;
+			left: 0;
+			width: 100%;
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				background-color: colors.$main-black;
+				height: 80px;
+				width: 600px;
+				z-index: 1;
+			}
+
+			&::before {
+				left: -600px;
+			}
+
+			&::after {
+				right: -600px;
+			}
+		}
+	}
 }
 
 //max-width: 768px

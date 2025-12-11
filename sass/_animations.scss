@@ -18,3 +18,12 @@
 		transform: scale(1);
 	}
 }
+
+@keyframes banner {
+	from {
+		transform: translateX(0px);
+	}
+	to {
+		transform: translateX(-400px);
+	}
+}
