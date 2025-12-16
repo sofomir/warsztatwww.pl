@@ -141,6 +141,10 @@ button:hover {
   background-color: rgb(255, 255, 192);
 }
 
+p {
+  line-height: 1.4;
+}
+
 section {
   scroll-margin-top: 50px;
 }
@@ -157,15 +161,6 @@ section {
   position: relative;
   text-align: center;
   padding: 20px 50px;
-}
-.title::after {
-  content: "";
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 100px);
-  border-bottom: 5px solid rgb(255, 128, 255);
 }
 
 .header {
@@ -320,38 +315,43 @@ section {
   display: flex;
   flex-direction: column;
   margin: 50px auto;
-  gap: 30px;
+  gap: 50px;
 }
-.offer-box .wrapper {
+.offer-box {
   display: flex;
-  margin: 30px 0px;
-  gap: 30px;
+  justify-content: center;
 }
-.offer-box .wrapper .offer-box-img {
+.offer-box-bgc {
+  display: flex;
+  background-color: rgba(136, 136, 136, 0.1);
+  border-radius: 10px;
+}
+.offer-box-bgc .offer-box-img {
   display: flex;
   width: 50%;
 }
-.offer-box .wrapper .offer-box-img img {
+.offer-box-bgc .offer-box-img img {
   width: 100%;
 }
-.offer-box .wrapper .offer-box-content {
+.offer-box-bgc .offer-box-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 50px;
   width: 50%;
 }
-.offer-box .wrapper .offer-box-content p {
-  margin-top: 20px;
+.offer-box-bgc .offer-box-content h3 {
+  margin-bottom: 30px;
 }
-.offer-box .wrapper .offer-box-content button {
-  margin-top: 20px;
+.offer-box-bgc .offer-box-content button {
+  margin-top: 30px;
 }
-.offer-box:nth-child(2n) .wrapper {
+.offer-box:nth-child(2n) .offer-box-bgc {
   flex-direction: row-reverse;
 }
 
 .offer-maintenance {
-  padding: 50px 0;
+  padding: 30px 0;
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 }
@@ -442,9 +442,6 @@ section {
 @media (max-width: 768px) {
   .wrapper {
     padding: 0 20px;
-  }
-  .title::after {
-    width: 200px;
   }
   .header {
     position: fixed;
@@ -576,17 +573,25 @@ section {
     text-align: center;
     letter-spacing: 0;
   }
-  .offer-box-img {
+  .offer {
+    margin: 30px auto;
+    gap: 20px;
+  }
+  .offer-box-bgc {
+    padding: 50px 20px;
+  }
+  .offer-box-bgc .offer-box-img {
     width: 100%;
   }
-  .offer-box-content {
+  .offer-box-bgc .offer-box-content {
     align-items: center;
     width: 100%;
+    padding: 0;
   }
-  .offer-box-content h3 {
+  .offer-box-bgc .offer-box-content h3 {
     text-align: center;
   }
-  .offer-box:nth-child(n) {
+  .offer:nth-child(n) .offer-box-bgc {
     flex-direction: column;
   }
   .footer .author {

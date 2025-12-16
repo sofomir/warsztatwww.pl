@@ -43,6 +43,10 @@ button {
 	}
 }
 
+p {
+	line-height: 1.4;
+}
+
 section {
 	scroll-margin-top: 50px;
 }
@@ -59,16 +63,6 @@ section {
 	position: relative;
 	text-align: center;
 	padding: 20px 50px;
-
-	&::after {
-		content: '';
-		position: absolute;
-		bottom: 10px;
-		left: 50%;
-		transform: translateX(-50%);
-		width: calc(100% - 100px);
-		border-bottom: 5px solid colors.$main-purple;
-	}
 }
 
 // ---------------------------------
@@ -265,12 +259,17 @@ section {
 	display: flex;
 	flex-direction: column;
 	margin: 50px auto;
-	gap: 30px;
+	gap: 50px;
 
-	&-box .wrapper {
+	&-box {
 		display: flex;
-		margin: 30px 0px;
-		gap: 30px;
+		justify-content: center;
+	}
+
+	&-box-bgc {
+		display: flex;
+		background-color: rgba(136, 136, 136, 0.1);
+		border-radius: 10px;
 
 		.offer-box-img {
 			display: flex;
@@ -285,25 +284,26 @@ section {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			padding: 0 50px;
 			width: 50%;
 
-			p {
-				margin-top: 20px;
+			h3 {
+				margin-bottom: 30px;
 			}
 
 			button {
-				margin-top: 20px;
+				margin-top: 30px;
 			}
 		}
 	}
 
-	&-box:nth-child(2n) .wrapper {
+	&-box:nth-child(2n) .offer-box-bgc {
 		flex-direction: row-reverse;
 	}
 }
 
 .offer-maintenance {
-	padding: 50px 0;
+	padding: 30px 0;
 	background-color: colors.$main-black;
 	color: colors.$main-white;
 
@@ -428,10 +428,6 @@ section {
 	// ---------------------------------
 	.wrapper {
 		padding: 0 20px;
-	}
-
-	.title::after {
-		width: 200px;
 	}
 
 	// ---------------------------------
@@ -608,21 +604,31 @@ section {
 	// ---------------------------------
 	// OFFER SECTION [max-width: 768px]
 	// ---------------------------------
-	.offer-box {
-		&-img {
-			width: 100%;
-		}
+	.offer {
+		margin: 30px auto;
+		gap: 20px;
 
-		&-content {
-			align-items: center;
-			width: 100%;
+		&-box {
+			&-bgc {
+				padding: 50px 20px;
 
-			h3 {
-				text-align: center;
+				.offer-box-img {
+					width: 100%;
+				}
+
+				.offer-box-content {
+					align-items: center;
+					width: 100%;
+					padding: 0;
+
+					h3 {
+						text-align: center;
+					}
+				}
 			}
 		}
 
-		&:nth-child(n) {
+		&:nth-child(n) .offer-box-bgc {
 			flex-direction: column;
 		}
 	}
