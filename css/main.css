@@ -334,12 +334,12 @@ section {
 .offer-box-bgc .offer-box-img {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 50%;
 }
 .offer-box-bgc .offer-box-img img {
-  width: 100%;
+  max-width: 100%;
   padding: 50px;
-  max-width: 500px;
 }
 .offer-box-bgc .offer-box-content {
   display: flex;

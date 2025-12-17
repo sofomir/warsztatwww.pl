@@ -281,12 +281,12 @@ section {
 		.offer-box-img {
 			display: flex;
 			justify-content: center;
+			align-items: center;
 			width: 50%;
-
+			
 			img {
-				width: 100%;
+				max-width: 100%;
 				padding: 50px;
-				max-width: 500px;
 			}
 		}
 
