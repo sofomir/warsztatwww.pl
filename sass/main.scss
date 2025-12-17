@@ -12,7 +12,7 @@ body {
 }
 
 body::selection {
-	background-color: colors.$main-yellow-light;
+	background-color: colors.$yellow-light;
 }
 
 h1,
@@ -33,13 +33,13 @@ button {
 	padding: 15px 50px;
 	font-size: 2rem;
 	font-weight: 600;
-	color: colors.$main-black;
+	color: colors.$main-dark;
 	border: none;
-	background-color: colors.$main-yellow;
+	background-color: colors.$yellow;
 	transition: background-color 0.3s ease-in-out;
 
 	&:hover {
-		background-color: colors.$main-yellow-light;
+		background-color: colors.$yellow-light;
 	}
 }
 
@@ -62,15 +62,13 @@ section {
 .title {
 	position: relative;
 	text-align: center;
-	padding: 50px 0;
 
-	h2 {
-		margin-bottom: 30px;
+	&-border {
+		padding: 50px;
 	}
 
 	p {
-		font-size: 2.2rem;
-		padding: 0 30px;
+		font-size: 2rem;
 	}
 }
 
@@ -95,7 +93,7 @@ section {
 			&-img {
 				width: 100px;
 				height: 100px;
-				background-color: colors.$main-black;
+				background-color: colors.$main-dark;
 				border-radius: 10px;
 				animation: heartbeat 3s infinite 10s;
 
@@ -108,17 +106,17 @@ section {
 
 				&-w1 {
 					translate: -50% -52.5%;
-					color: colors.$main-yellow;
+					color: colors.$yellow;
 				}
 
 				&-w2 {
 					translate: -55% -42.5%;
-					color: colors.$main-blue;
+					color: colors.$blue;
 				}
 
 				&-w3 {
 					translate: -45% -47.5%;
-					color: colors.$main-purple;
+					color: colors.$purple;
 				}
 			}
 		}
@@ -140,7 +138,7 @@ section {
 						font-size: 2rem;
 						font-family: variables.$font-main-one;
 						font-weight: 600;
-						color: colors.$main-black;
+						color: colors.$main-dark;
 
 						&::after {
 							content: '';
@@ -148,7 +146,7 @@ section {
 							bottom: 10px;
 							left: 10%;
 							width: 0;
-							border-bottom: 5px solid colors.$main-yellow;
+							border-bottom: 5px solid colors.$yellow;
 							transition: width 0.3s ease-in-out;
 						}
 
@@ -225,8 +223,8 @@ section {
 
 .belt {
 	height: 80px;
-	background-color: colors.$main-black;
-	color: colors.$main-white;
+	background-color: colors.$main-dark;
+	color: colors.$main-bright;
 	overflow-x: hidden;
 
 	.wrapper {
@@ -246,15 +244,15 @@ section {
 			font-family: variables.$font-main-two;
 
 			.w1 {
-				color: colors.$main-yellow;
+				color: colors.$yellow;
 			}
 
 			.w2 {
-				color: colors.$main-blue;
+				color: colors.$blue;
 			}
 
 			.w3 {
-				color: colors.$main-purple;
+				color: colors.$purple;
 			}
 		}
 	}
@@ -277,17 +275,18 @@ section {
 
 	&-box-bgc {
 		display: flex;
-		background-color: colors.$main-gray-opacity15;
+		background-color: colors.$gray-opacity15;
 		border-radius: 10px;
 
 		.offer-box-img {
 			display: flex;
-			align-items: center;
+			justify-content: center;
 			width: 50%;
 
 			img {
-				max-width: 100%;
-				height: auto;
+				width: 100%;
+				padding: 50px;
+				max-width: 500px;
 			}
 		}
 
@@ -315,7 +314,7 @@ section {
 
 .offer-maintenance {
 	padding: 30px 0;
-	background-color: colors.$main-blue-light;
+	background-color: colors.$blue-light;
 }
 
 // ---------------------------------
@@ -323,8 +322,8 @@ section {
 // ---------------------------------
 
 .footer {
-	background-color: colors.$main-blue-light;
-	color: colors.$main-black;
+	background-color: colors.$blue-light;
+	color: colors.$main-dark;
 
 	.contact {
 		height: 300px;
@@ -337,14 +336,14 @@ section {
 		align-items: center;
 		line-height: 60px;
 		font-family: variables.$font-main-two;
-		color: colors.$main-black;
+		color: colors.$main-dark;
 
 		&::before {
 			content: '';
 			position: absolute;
 			bottom: 60px;
 			width: 100%;
-			border-bottom: 3px solid colors.$main-purple;
+			border-bottom: 3px solid colors.$purple;
 		}
 	}
 
@@ -356,7 +355,7 @@ section {
 		.logo-img {
 			width: 100px;
 			height: 100px;
-			background-color: colors.$main-black;
+			background-color: colors.$main-dark;
 			border-radius: 10px;
 			animation: heartbeat 3s infinite 10s;
 
@@ -369,17 +368,17 @@ section {
 
 			&-w1 {
 				translate: -50% -52.5%;
-				color: colors.$main-yellow;
+				color: colors.$yellow;
 			}
 
 			&-w2 {
 				translate: -55% -42.5%;
-				color: colors.$main-blue;
+				color: colors.$blue;
 			}
 
 			&-w3 {
 				translate: -45% -47.5%;
-				color: colors.$main-purple;
+				color: colors.$purple;
 			}
 		}
 	}
@@ -405,7 +404,7 @@ section {
 			&::after {
 				content: '';
 				position: absolute;
-				background-color: colors.$main-black;
+				background-color: colors.$main-dark;
 				height: 80px;
 				width: 600px;
 				z-index: 1;
@@ -432,18 +431,21 @@ section {
 	// ---------------------------------
 	// GENERAL STYLING [max-width: 768px]
 	// ---------------------------------
+	section {
+		scroll-margin-top: 30px;
+	}
+
 	.wrapper {
 		padding: 0 20px;
 	}
 
 	.title {
-		h2 {
-			margin-bottom: 30px;
+		&-border {
+			padding: 30px 0;
 		}
 
 		p {
 			font-size: 1.8rem;
-			padding: 0;
 		}
 	}
 
@@ -479,7 +481,7 @@ section {
 				justify-content: flex-end;
 				width: 100%;
 				padding-top: 100px;
-				background-color: colors.$main-white-opacity-85;
+				background-color: colors.$main-bright-opacity-85;
 				opacity: 0;
 				transform: translateY(-100%);
 				transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -496,7 +498,7 @@ section {
 							padding: 20px 25px;
 
 							&::after {
-								border-bottom: 5px solid colors.$main-blue;
+								border-bottom: 5px solid colors.$blue;
 							}
 						}
 					}
@@ -508,7 +510,7 @@ section {
 					top: 100px;
 					left: 2.5%;
 					width: 95%;
-					border-bottom: 3px solid colors.$main-purple;
+					border-bottom: 3px solid colors.$purple;
 				}
 
 				&-show {
@@ -536,7 +538,7 @@ section {
 					position: absolute;
 					width: 45px;
 					height: 4px;
-					background: colors.$main-black;
+					background: colors.$main-dark;
 					transition: transform 0.5s, top 0.3s, background 0.3s;
 					transform-origin: center;
 				}
@@ -580,7 +582,7 @@ section {
 		}
 
 		&-bgc {
-			background-color: colors.$main-white-opacity-85;
+			background-color: colors.$main-bright-opacity-85;
 		}
 	}
 
@@ -631,6 +633,11 @@ section {
 
 				.offer-box-img {
 					width: 100%;
+
+					img {
+						padding: 0;
+						margin-bottom: 30px;
+					}
 				}
 
 				.offer-box-content {
